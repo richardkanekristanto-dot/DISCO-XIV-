@@ -1,0 +1,855 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+
+    <!-- ============================================================
+         GRADIENTS & FILLS
+         ============================================================ -->
+
+    <!-- Rich Indigo-Burgundy Night Sky -->
+    <linearGradient id="nightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#04010A"/>
+      <stop offset="20%" stop-color="#0D0318"/>
+      <stop offset="45%" stop-color="#1E0828"/>
+      <stop offset="70%" stop-color="#360A30"/>
+      <stop offset="100%" stop-color="#4A0F2E"/>
+    </linearGradient>
+
+    <!-- Moon: very bright, warm gold-white crescent -->
+    <radialGradient id="moonBig" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#FFF8E0"/>
+      <stop offset="65%" stop-color="#FFE98A"/>
+      <stop offset="90%" stop-color="#E6C040"/>
+      <stop offset="100%" stop-color="#C9A24B"/>
+    </radialGradient>
+    <radialGradient id="moonHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF5D0" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#FFE07A" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#C9A24B" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C9A24B" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Extra wide atmospheric moon-glow -->
+    <radialGradient id="moonAtmos" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF3B0" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#E6AD30" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#C9A24B" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Mountains -->
+    <linearGradient id="mtFar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#200628"/>
+      <stop offset="100%" stop-color="#100214"/>
+    </linearGradient>
+    <linearGradient id="mtMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2E0A26"/>
+      <stop offset="100%" stop-color="#150314"/>
+    </linearGradient>
+    <linearGradient id="mtNear" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A0516"/>
+      <stop offset="100%" stop-color="#0A010A"/>
+    </linearGradient>
+
+    <!-- Villa stone facade -->
+    <linearGradient id="villaWall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5A2240"/>
+      <stop offset="40%" stop-color="#3E1228"/>
+      <stop offset="100%" stop-color="#200815"/>
+    </linearGradient>
+    <linearGradient id="villaRoof" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B2545"/>
+      <stop offset="100%" stop-color="#2A0A1A"/>
+    </linearGradient>
+    <linearGradient id="villaWing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A1A32"/>
+      <stop offset="100%" stop-color="#1C060E"/>
+    </linearGradient>
+
+    <!-- Warm glowing windows -->
+    <radialGradient id="winGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFCF0"/>
+      <stop offset="25%" stop-color="#FFE88A"/>
+      <stop offset="60%" stop-color="#F0A020"/>
+      <stop offset="100%" stop-color="#8C4A05"/>
+    </radialGradient>
+
+    <!-- Chandelier / candle glow (amber) -->
+    <radialGradient id="chandGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF8C8" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#FFD568" stop-opacity="0.65"/>
+      <stop offset="70%" stop-color="#FFB020" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#C9A24B" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Candle flame (small bright core) -->
+    <radialGradient id="flameGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="20%" stop-color="#FFFADA"/>
+      <stop offset="50%" stop-color="#FFCA28" stop-opacity="0.85"/>
+      <stop offset="85%" stop-color="#FF9800" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FF6F00" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Tablecloth linen -->
+    <linearGradient id="linen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F5EDDC"/>
+      <stop offset="100%" stop-color="#D8C8A4"/>
+    </linearGradient>
+    <linearGradient id="linenSide" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8D9B8"/>
+      <stop offset="100%" stop-color="#B09060"/>
+    </linearGradient>
+
+    <!-- Terrace ground / paving -->
+    <linearGradient id="paving" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3A1428"/>
+      <stop offset="60%" stop-color="#240A18"/>
+      <stop offset="100%" stop-color="#100309"/>
+    </linearGradient>
+    <!-- Foreground dark ground -->
+    <linearGradient id="fgGround" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#120208"/>
+      <stop offset="100%" stop-color="#040006"/>
+    </linearGradient>
+
+    <!-- Gold trim for balustrade, frames etc -->
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8C6A22"/>
+      <stop offset="30%" stop-color="#E6CF8B"/>
+      <stop offset="60%" stop-color="#C9A24B"/>
+      <stop offset="100%" stop-color="#8C6A22"/>
+    </linearGradient>
+
+    <!-- Rose petal red -->
+    <radialGradient id="rosePetal" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FF9EA8"/>
+      <stop offset="60%" stop-color="#C0344A"/>
+      <stop offset="100%" stop-color="#7A1428"/>
+    </radialGradient>
+
+    <!-- Gold glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Strong glow for moon -->
+    <filter id="moonGlowFilter" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Soft glow for fairy lights -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- ================================================================
+       1. NIGHT SKY — deep indigo to burgundy
+       ================================================================ -->
+  <rect width="1920" height="1080" fill="url(#nightSky)"/>
+
+  <!-- === NEBULA CLOUDS / MILKY WAY WISPS === -->
+  <ellipse cx="600" cy="200" rx="400" ry="90" fill="#2A0838" opacity="0.4"/>
+  <ellipse cx="1300" cy="150" rx="350" ry="70" fill="#380C45" opacity="0.3"/>
+  <ellipse cx="960" cy="300" rx="600" ry="60" fill="#1E0630" opacity="0.25"/>
+
+  <!-- === STARS — many layers for richness === -->
+  <!-- Bright large stars -->
+  <g fill="#FFFEF5" opacity="0.95">
+    <circle cx="82" cy="65" r="2.2"/><circle cx="210" cy="42" r="2.8"/><circle cx="378" cy="88" r="2"/>
+    <circle cx="510" cy="38" r="2.5"/><circle cx="645" cy="72" r="1.8"/><circle cx="780" cy="52" r="2.2"/>
+    <circle cx="920" cy="30" r="2.8"/><circle cx="1055" cy="68" r="1.8"/><circle cx="1200" cy="44" r="2.5"/>
+    <circle cx="1350" cy="78" r="2"/><circle cx="1510" cy="35" r="2.2"/><circle cx="1680" cy="55" r="2.8"/>
+    <circle cx="1820" cy="40" r="2"/><circle cx="155" cy="135" r="2.2"/><circle cx="445" cy="168" r="1.8"/>
+    <circle cx="720" cy="142" r="2.5"/><circle cx="1030" cy="155" r="2"/><circle cx="1420" cy="160" r="2.2"/>
+    <circle cx="1760" cy="140" r="1.8"/>
+  </g>
+  <!-- Medium stars -->
+  <g fill="#FEFAE8" opacity="0.8">
+    <circle cx="130" cy="92" r="1.5"/><circle cx="290" cy="118" r="1.8"/><circle cx="430" cy="55" r="1.5"/>
+    <circle cx="560" cy="130" r="1.2"/><circle cx="695" cy="100" r="1.5"/><circle cx="840" cy="80" r="1.8"/>
+    <circle cx="985" cy="115" r="1.5"/><circle cx="1110" cy="95" r="1.2"/><circle cx="1265" cy="85" r="1.5"/>
+    <circle cx="1395" cy="118" r="1.8"/><circle cx="1565" cy="90" r="1.5"/><circle cx="1720" cy="108" r="1.2"/>
+    <circle cx="1875" cy="78" r="1.5"/><circle cx="68" cy="175" r="1.5"/><circle cx="335" cy="195" r="1.2"/>
+    <circle cx="615" cy="185" r="1.5"/><circle cx="870" cy="195" r="1.8"/><circle cx="1145" cy="178" r="1.5"/>
+    <circle cx="1480" cy="190" r="1.2"/><circle cx="1830" cy="175" r="1.5"/>
+  </g>
+  <!-- Small dim stars for depth -->
+  <g fill="#FFFEF5" opacity="0.5">
+    <circle cx="175" cy="62" r="1"/><circle cx="320" cy="75" r="0.8"/><circle cx="490" cy="98" r="1"/>
+    <circle cx="635" cy="50" r="0.8"/><circle cx="765" cy="118" r="1"/><circle cx="900" cy="58" r="0.8"/>
+    <circle cx="1040" cy="42" r="1"/><circle cx="1180" cy="102" r="0.8"/><circle cx="1310" cy="58" r="1"/>
+    <circle cx="1460" cy="88" r="0.8"/><circle cx="1600" cy="62" r="1"/><circle cx="1745" cy="88" r="0.8"/>
+    <circle cx="1900" cy="55" r="1"/><circle cx="250" cy="145" r="0.8"/><circle cx="490" cy="210" r="1"/>
+    <circle cx="740" cy="230" r="0.8"/><circle cx="995" cy="215" r="1"/><circle cx="1230" cy="225" r="0.8"/>
+    <circle cx="1550" cy="210" r="1"/><circle cx="1800" cy="230" r="0.8"/>
+  </g>
+
+  <!-- 4-point star sparkles scattered -->
+  <g fill="#FFF8E0" opacity="0.75">
+    <polygon points="390,45 392,40 394,45 392,50" transform="rotate(20,392,45)"/>
+    <polygon points="850,32 852,27 854,32 852,37" transform="rotate(15,852,32)"/>
+    <polygon points="1140,60 1142,55 1144,60 1142,65" transform="rotate(30,1142,60)"/>
+    <polygon points="1700,42 1702,37 1704,42 1702,47" transform="rotate(10,1702,42)"/>
+    <polygon points="62,110 64,105 66,110 64,115" transform="rotate(25,64,110)"/>
+    <polygon points="1860,105 1862,100 1864,105 1862,110" transform="rotate(5,1862,105)"/>
+  </g>
+
+  <!-- ================================================================
+       2. MOON — VERY PROMINENT, RIGHT SIDE, CLEARLY VISIBLE
+       ================================================================ -->
+  <!-- Wide atmospheric corona -->
+  <circle cx="1490" cy="230" r="260" fill="url(#moonAtmos)"/>
+  <!-- Halo ring -->
+  <circle cx="1490" cy="230" r="150" fill="url(#moonHalo)"/>
+  <!-- Secondary halo -->
+  <circle cx="1490" cy="230" r="85" fill="url(#moonHalo)" opacity="0.9"/>
+
+  <!-- CRESCENT BODY — large, luminous, clearly visible -->
+  <g id="moon-crescent" filter="url(#moonGlowFilter)">
+    <!-- Full moon disk base (behind crescent) for glow -->
+    <circle cx="1490" cy="230" r="68" fill="#FFF3C0" opacity="0.3"/>
+    <!-- The lit crescent arc -->
+    <path d="M 1490 158
+             C 1527 158, 1558 191, 1558 230
+             C 1558 269, 1527 302, 1490 302
+             C 1515 290, 1532 262, 1532 230
+             C 1532 198, 1515 170, 1490 158 Z"
+          fill="url(#moonBig)"
+          stroke="#FFF8D0" stroke-width="2"/>
+    <!-- Inner crescent highlight arc -->
+    <path d="M 1490 168
+             C 1522 168, 1546 196, 1546 230
+             C 1546 264, 1522 292, 1490 292
+             C 1510 282, 1524 258, 1524 230
+             C 1524 202, 1510 178, 1490 168 Z"
+          fill="#FFFFF0" opacity="0.35"/>
+    <!-- Crescent gold rim outline -->
+    <path d="M 1490 158
+             C 1527 158, 1558 191, 1558 230
+             C 1558 269, 1527 302, 1490 302"
+          fill="none" stroke="#E6CF8B" stroke-width="3" opacity="0.6"/>
+  </g>
+
+  <!-- Venus / Evening star beside moon -->
+  <g transform="translate(1430, 165)" filter="url(#softGlow)">
+    <polygon points="0,-14 3,-3 14,0 3,3 0,14 -3,3 -14,0 -3,-3" fill="#FFFDE0"/>
+    <circle cx="0" cy="0" r="3.5" fill="#FFFFFF"/>
+  </g>
+  <!-- Small star near moon -->
+  <g transform="translate(1570, 185)" filter="url(#softGlow)">
+    <polygon points="0,-9 2,-2 9,0 2,2 0,9 -2,2 -9,0 -2,-2" fill="#FFE8A0"/>
+    <circle cx="0" cy="0" r="2" fill="#FFFADA"/>
+  </g>
+  <!-- Crescent dot star lower right -->
+  <circle cx="1600" cy="260" r="2.5" fill="#FFF5C0" filter="url(#softGlow)"/>
+
+  <!-- ================================================================
+       3. MOUNTAIN SILHOUETTES — richer layered ridgelines
+       ================================================================ -->
+  <!-- Far ridge -->
+  <path d="M 0 540 Q 160 440 380 500 Q 560 440 720 490 Q 880 420 1040 475 Q 1180 405 1340 460
+           Q 1480 400 1600 445 Q 1720 395 1920 470 L 1920 1080 L 0 1080 Z"
+        fill="url(#mtFar)"/>
+  <!-- Mid ridge -->
+  <path d="M 0 610 Q 220 530 460 590 Q 640 510 840 575 Q 1020 500 1240 560
+           Q 1420 490 1640 555 Q 1800 505 1920 560 L 1920 1080 L 0 1080 Z"
+        fill="url(#mtMid)"/>
+  <!-- Near tree-line ridge -->
+  <path d="M 0 680 Q 300 630 580 665 Q 760 615 1000 655 Q 1180 610 1440 650
+           Q 1660 615 1920 648 L 1920 1080 L 0 1080 Z"
+        fill="url(#mtNear)"/>
+
+  <!-- Pine tree silhouettes left cluster -->
+  <g fill="#0C0110">
+    <path d="M 60 740 C 50 660 85 555 95 505 C 105 555 140 660 130 740 Z"/>
+    <path d="M 110 760 C 100 695 130 590 140 540 C 150 590 185 695 175 760 Z"/>
+    <path d="M 30 775 C 20 710 50 625 60 570 C 70 625 100 710 90 775 Z"/>
+    <path d="M 160 750 C 150 685 178 600 188 548 C 198 600 225 685 215 750 Z"/>
+  </g>
+  <!-- Pine tree silhouettes right cluster -->
+  <g fill="#0C0110">
+    <path d="M 1740 745 C 1728 660 1760 555 1770 505 C 1780 555 1812 660 1800 745 Z"/>
+    <path d="M 1800 762 C 1790 695 1820 590 1830 540 C 1840 590 1870 695 1860 762 Z"/>
+    <path d="M 1700 772 C 1690 710 1715 625 1724 572 C 1733 625 1758 710 1748 772 Z"/>
+    <path d="M 1858 748 C 1850 685 1877 598 1886 548 C 1895 598 1920 685 1910 748 Z"/>
+  </g>
+  <!-- Extra mid-side pines -->
+  <g fill="#100212" opacity="0.8">
+    <path d="M 240 775 C 232 718 252 648 260 605 C 268 648 288 718 280 775 Z"/>
+    <path d="M 1655 762 C 1646 710 1664 645 1672 604 C 1680 645 1699 710 1690 762 Z"/>
+  </g>
+
+  <!-- ================================================================
+       4. GRAND NOBLE VILLA ARCHITECTURE
+       ================================================================ -->
+  <g id="villa" transform="translate(620, 348)">
+
+    <!-- WIDE TERRACE FOUNDATION -->
+    <rect x="-180" y="340" width="1040" height="200" fill="url(#paving)" stroke="#5A1E38" stroke-width="2"/>
+    <!-- Gold-trim balcony rail along terrace front edge -->
+    <rect x="-180" y="338" width="1040" height="6" fill="url(#goldTrim)" opacity="0.8"/>
+
+    <!-- === LEFT WING === -->
+    <rect x="-130" y="155" width="260" height="210" fill="url(#villaWing)"/>
+    <polygon points="-148,155 0,55 128,155" fill="url(#villaRoof)" stroke="#7A2048" stroke-width="2"/>
+    <!-- Wing windows (arched, glowing) -->
+    <path d="M -90 185 C -90 162, -50 162, -50 185 L -50 255 L -90 255 Z" fill="url(#winGlow)" opacity="0.9"/>
+    <path d="M -20 185 C -20 162, 20 162, 20 185 L 20 255 L -20 255 Z" fill="url(#winGlow)" opacity="0.85"/>
+    <path d="M 50 185 C 50 162, 90 162, 90 185 L 90 255 L 50 255 Z" fill="url(#winGlow)" opacity="0.9"/>
+    <!-- Wing window warm glow bleed -->
+    <ellipse cx="-70" cy="225" rx="30" ry="20" fill="#FFD060" opacity="0.08"/>
+    <ellipse cx="0" cy="225" rx="30" ry="20" fill="#FFD060" opacity="0.08"/>
+    <ellipse cx="70" cy="225" rx="30" ry="20" fill="#FFD060" opacity="0.08"/>
+
+    <!-- === RIGHT WING === -->
+    <rect x="550" y="155" width="260" height="210" fill="url(#villaWing)"/>
+    <polygon points="535,155 680,55 808,155" fill="url(#villaRoof)" stroke="#7A2048" stroke-width="2"/>
+    <!-- Right wing windows -->
+    <path d="M 590 185 C 590 162, 630 162, 630 185 L 630 255 L 590 255 Z" fill="url(#winGlow)" opacity="0.9"/>
+    <path d="M 660 185 C 660 162, 700 162, 700 185 L 700 255 L 660 255 Z" fill="url(#winGlow)" opacity="0.85"/>
+    <path d="M 730 185 C 730 162, 770 162, 770 185 L 770 255 L 730 255 Z" fill="url(#winGlow)" opacity="0.9"/>
+    <ellipse cx="610" cy="225" rx="30" ry="20" fill="#FFD060" opacity="0.08"/>
+    <ellipse cx="680" cy="225" rx="30" ry="20" fill="#FFD060" opacity="0.08"/>
+    <ellipse cx="750" cy="225" rx="30" ry="20" fill="#FFD060" opacity="0.08"/>
+
+    <!-- === MAIN CENTRAL CORPS DE LOGIS === -->
+    <rect x="150" y="68" width="380" height="295" fill="url(#villaWall)" stroke="#6E2642" stroke-width="2.5"/>
+    <!-- Central roof with high gabled pediment -->
+    <polygon points="128,68 340,-28 552,68" fill="url(#villaRoof)" stroke="#8A3058" stroke-width="2.5"/>
+    <!-- Pediment triangular gold detail -->
+    <polygon points="250,22 340,-30 430,22" fill="#C9A24B" opacity="0.7"/>
+    <!-- Circular clock / crest in pediment -->
+    <circle cx="340" cy="10" r="13" fill="#4A0E1B" stroke="#E6CF8B" stroke-width="2.5"/>
+    <polygon points="340,5 342,9 346,10 342,11 340,15 338,11 334,10 338,9" fill="#FFF5D0"/>
+
+    <!-- Gold column pilasters on main facade -->
+    <rect x="160" y="68" width="10" height="295" fill="url(#goldTrim)" opacity="0.55"/>
+    <rect x="260" y="68" width="8" height="295" fill="url(#goldTrim)" opacity="0.4"/>
+    <rect x="410" y="68" width="8" height="295" fill="url(#goldTrim)" opacity="0.4"/>
+    <rect x="508" y="68" width="10" height="295" fill="url(#goldTrim)" opacity="0.55"/>
+
+    <!-- UPPER-FLOOR TALL ARCHED WINDOWS (3) -->
+    <path d="M 195 95 C 195 68, 245 68, 245 95 L 245 190 L 195 190 Z" fill="url(#winGlow)" opacity="0.95"/>
+    <path d="M 290 82 C 290 50, 390 50, 390 82 L 390 190 L 290 190 Z" fill="url(#winGlow)" opacity="0.95"/>
+    <path d="M 435 95 C 435 68, 485 68, 485 95 L 485 190 L 435 190 Z" fill="url(#winGlow)" opacity="0.95"/>
+    <!-- Window warm-glow blooms on facade -->
+    <ellipse cx="220" cy="150" rx="30" ry="40" fill="#FFD050" opacity="0.12"/>
+    <ellipse cx="340" cy="140" rx="55" ry="50" fill="#FFD050" opacity="0.14"/>
+    <ellipse cx="460" cy="150" rx="30" ry="40" fill="#FFD050" opacity="0.12"/>
+
+    <!-- GROUND FLOOR GRAND ARCHED PORTALS (3) — warmly lit entrance -->
+    <!-- Side door left -->
+    <path d="M 185 235 C 185 206, 240 206, 240 235 L 240 362 L 185 362 Z" fill="url(#winGlow)" opacity="0.95"/>
+    <!-- Double Grand Entrance Portal (center) -->
+    <path d="M 275 220 C 275 182, 405 182, 405 220 L 405 362 L 275 362 Z" fill="url(#winGlow)" opacity="0.98"/>
+    <!-- Door center divide -->
+    <line x1="340" y1="195" x2="340" y2="362" stroke="#2E0812" stroke-width="3"/>
+    <line x1="275" y1="275" x2="405" y2="275" stroke="#2E0812" stroke-width="2.5"/>
+    <!-- Side door right -->
+    <path d="M 440 235 C 440 206, 495 206, 495 235 L 495 362 L 440 362 Z" fill="url(#winGlow)" opacity="0.95"/>
+
+    <!-- Gold door-frame trim lines -->
+    <path d="M 185 235 C 185 206, 240 206, 240 235" fill="none" stroke="#C9A24B" stroke-width="2"/>
+    <path d="M 275 220 C 275 182, 405 182, 405 220" fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+    <path d="M 440 235 C 440 206, 495 206, 495 235" fill="none" stroke="#C9A24B" stroke-width="2"/>
+
+    <!-- Grand entrance glow pool on terrace -->
+    <ellipse cx="340" cy="362" rx="150" ry="30" fill="#FFD868" opacity="0.12"/>
+
+    <!-- ORNATE BALCONY BALUSTRADE WITH GOLD SPINDLES -->
+    <rect x="168" y="210" width="344" height="10" fill="#280A18"/>
+    <rect x="168" y="210" width="344" height="4" fill="url(#goldTrim)" opacity="0.9"/>
+    <g stroke="#C9A24B" stroke-width="2.5" opacity="0.8">
+      <line x1="178" y1="210" x2="178" y2="230"/><line x1="200" y1="210" x2="200" y2="230"/>
+      <line x1="222" y1="210" x2="222" y2="230"/><line x1="244" y1="210" x2="244" y2="230"/>
+      <line x1="266" y1="210" x2="266" y2="230"/>
+      <!-- Right side balustrade -->
+      <line x1="412" y1="210" x2="412" y2="230"/><line x1="434" y1="210" x2="434" y2="230"/>
+      <line x1="456" y1="210" x2="456" y2="230"/><line x1="478" y1="210" x2="478" y2="230"/>
+      <line x1="500" y1="210" x2="500" y2="230"/>
+    </g>
+
+    <!-- GRAND TERRACE CHANDELIER LIGHT POOL -->
+    <ellipse cx="340" cy="358" rx="260" ry="80" fill="url(#chandGlow)" opacity="0.65"/>
+
+  </g><!-- end villa -->
+
+  <!-- ================================================================
+       5. HANGING CRYSTAL CHANDELIERS — prominent, lavish
+       ================================================================ -->
+
+  <!-- CHANDELIER LEFT -->
+  <g transform="translate(728, 580)" filter="url(#glow)">
+    <!-- Wide warm-glow pool below -->
+    <ellipse cx="0" cy="30" rx="90" ry="35" fill="url(#chandGlow)" opacity="0.7"/>
+    <!-- Ceiling rosette -->
+    <circle cx="0" cy="-52" r="10" fill="#C9A24B" opacity="0.8"/>
+    <!-- Stem chain -->
+    <line x1="0" y1="-42" x2="0" y2="-14" stroke="#C9A24B" stroke-width="3"/>
+    <line x1="0" y1="-42" x2="0" y2="-14" stroke="#E6CF8B" stroke-width="1.2"/>
+    <!-- Main ring frame -->
+    <ellipse cx="0" cy="-14" rx="38" ry="6" fill="none" stroke="#C9A24B" stroke-width="3"/>
+    <ellipse cx="0" cy="-14" rx="38" ry="6" fill="none" stroke="#E6CF8B" stroke-width="1"/>
+    <!-- Arms & candle branches -->
+    <path d="M -38 -14 Q -25 -2 -15 8 M 38 -14 Q 25 -2 15 8 M 0 -20 L 0 8" fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+    <!-- Crystal pendants -->
+    <g fill="#E6CF8B" opacity="0.9">
+      <polygon points="-38,-14 -40,-22 -36,-22"/><polygon points="38,-14 40,-22 36,-22"/>
+      <polygon points="-20,-6 -22,-14 -18,-14"/><polygon points="20,-6 22,-14 18,-14"/>
+      <polygon points="0,-24 -2,-32 2,-32"/>
+    </g>
+    <!-- Candle tips (3) -->
+    <g filter="url(#softGlow)">
+      <ellipse cx="-38" cy="-15" rx="4" ry="6" fill="#FFE896"/>
+      <ellipse cx="0" cy="-21" rx="4" ry="6" fill="#FFE896"/>
+      <ellipse cx="38" cy="-15" rx="4" ry="6" fill="#FFE896"/>
+    </g>
+    <!-- Flame glows -->
+    <circle cx="-38" cy="-20" r="8" fill="url(#flameGlow)"/>
+    <circle cx="0" cy="-26" r="9" fill="url(#flameGlow)"/>
+    <circle cx="38" cy="-20" r="8" fill="url(#flameGlow)"/>
+  </g>
+
+  <!-- CHANDELIER CENTER (biggest) -->
+  <g transform="translate(978, 558)" filter="url(#glow)">
+    <ellipse cx="0" cy="40" rx="130" ry="45" fill="url(#chandGlow)" opacity="0.75"/>
+    <!-- Ceiling rosette -->
+    <circle cx="0" cy="-65" r="13" fill="#C9A24B" opacity="0.9"/>
+    <!-- Stem -->
+    <line x1="0" y1="-52" x2="0" y2="-20" stroke="#C9A24B" stroke-width="4"/>
+    <line x1="0" y1="-52" x2="0" y2="-20" stroke="#E6CF8B" stroke-width="1.5"/>
+    <!-- Two-tier ring frame -->
+    <ellipse cx="0" cy="-20" rx="52" ry="8" fill="none" stroke="#C9A24B" stroke-width="4"/>
+    <ellipse cx="0" cy="-20" rx="52" ry="8" fill="none" stroke="#FFF5D0" stroke-width="1.2"/>
+    <ellipse cx="0" cy="-8" rx="30" ry="5" fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+    <!-- Arms (5) -->
+    <path d="M -52 -20 Q -35 -4 -22 12 M 52 -20 Q 35 -4 22 12 M -26 -24 Q -15 -8 -8 8 M 26 -24 Q 15 -8 8 8 M 0 -28 L 0 12"
+          fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+    <!-- Crystal drops — large -->
+    <g fill="#E6CF8B" opacity="0.95">
+      <polygon points="-52,-20 -55,-30 -49,-30"/>
+      <polygon points="52,-20 55,-30 49,-30"/>
+      <polygon points="-26,-24 -29,-34 -23,-34"/>
+      <polygon points="26,-24 29,-34 23,-34"/>
+      <polygon points="0,-28 -3,-38 3,-38"/>
+      <!-- Middle tier drops -->
+      <polygon points="-38,-14 -40,-20 -36,-20"/>
+      <polygon points="38,-14 40,-20 36,-20"/>
+      <polygon points="0,-12 -2,-18 2,-18"/>
+    </g>
+    <!-- Candles (5) -->
+    <g filter="url(#softGlow)">
+      <ellipse cx="-52" cy="-21" rx="5" ry="7" fill="#FFE896"/>
+      <ellipse cx="-26" cy="-25" rx="5" ry="7" fill="#FFE896"/>
+      <ellipse cx="0" cy="-29" rx="5" ry="7" fill="#FFE896"/>
+      <ellipse cx="26" cy="-25" rx="5" ry="7" fill="#FFE896"/>
+      <ellipse cx="52" cy="-21" rx="5" ry="7" fill="#FFE896"/>
+    </g>
+    <!-- Flame glows (5) -->
+    <circle cx="-52" cy="-28" r="10" fill="url(#flameGlow)"/>
+    <circle cx="-26" cy="-32" r="10" fill="url(#flameGlow)"/>
+    <circle cx="0" cy="-36" r="12" fill="url(#flameGlow)"/>
+    <circle cx="26" cy="-32" r="10" fill="url(#flameGlow)"/>
+    <circle cx="52" cy="-28" r="10" fill="url(#flameGlow)"/>
+  </g>
+
+  <!-- CHANDELIER RIGHT -->
+  <g transform="translate(1230, 580)" filter="url(#glow)">
+    <ellipse cx="0" cy="30" rx="90" ry="35" fill="url(#chandGlow)" opacity="0.7"/>
+    <circle cx="0" cy="-52" r="10" fill="#C9A24B" opacity="0.8"/>
+    <line x1="0" y1="-42" x2="0" y2="-14" stroke="#C9A24B" stroke-width="3"/>
+    <ellipse cx="0" cy="-14" rx="38" ry="6" fill="none" stroke="#C9A24B" stroke-width="3"/>
+    <ellipse cx="0" cy="-14" rx="38" ry="6" fill="none" stroke="#E6CF8B" stroke-width="1"/>
+    <path d="M -38 -14 Q -25 -2 -15 8 M 38 -14 Q 25 -2 15 8 M 0 -20 L 0 8" fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+    <g fill="#E6CF8B" opacity="0.9">
+      <polygon points="-38,-14 -40,-22 -36,-22"/><polygon points="38,-14 40,-22 36,-22"/>
+      <polygon points="-20,-6 -22,-14 -18,-14"/><polygon points="20,-6 22,-14 18,-14"/>
+      <polygon points="0,-24 -2,-32 2,-32"/>
+    </g>
+    <g filter="url(#softGlow)">
+      <ellipse cx="-38" cy="-15" rx="4" ry="6" fill="#FFE896"/>
+      <ellipse cx="0" cy="-21" rx="4" ry="6" fill="#FFE896"/>
+      <ellipse cx="38" cy="-15" rx="4" ry="6" fill="#FFE896"/>
+    </g>
+    <circle cx="-38" cy="-20" r="8" fill="url(#flameGlow)"/>
+    <circle cx="0" cy="-26" r="9" fill="url(#flameGlow)"/>
+    <circle cx="38" cy="-20" r="8" fill="url(#flameGlow)"/>
+  </g>
+
+  <!-- ================================================================
+       6. FESTIVE FAIRY-LIGHT GARLANDS (Criss-crossing strings)
+       ================================================================ -->
+  <g id="fairylights" stroke="#B08830" stroke-width="1.5" fill="none" opacity="0.75">
+    <!-- Main upper garland -->
+    <path d="M 320 548 Q 480 596 640 568 Q 800 596 960 568 Q 1120 596 1280 568 Q 1440 596 1600 548 Q 1680 568 1740 548"/>
+    <!-- Diagonal cross garland -->
+    <path d="M 320 548 Q 640 620 980 580 Q 1320 625 1740 548"/>
+    <!-- Mid lower garland -->
+    <path d="M 400 598 Q 600 652 800 622 Q 1000 652 1200 622 Q 1400 652 1580 598"/>
+    <!-- Bottom garland -->
+    <path d="M 450 650 Q 680 695 960 668 Q 1240 695 1480 650"/>
+    <!-- Criss-cross extra side -->
+    <path d="M 320 548 Q 540 680 760 638 Q 980 695 1200 648 Q 1420 695 1640 648 Q 1700 625 1740 598"/>
+  </g>
+  <!-- Glowing light bulbs on garlands -->
+  <g id="bulbs" filter="url(#softGlow)">
+    <!-- Row 1 bulbs (amber) -->
+    <g fill="#FFE87A">
+      <circle cx="400" cy="572" r="5"/><circle cx="480" cy="590" r="5.5"/><circle cx="560" cy="582" r="5"/>
+      <circle cx="640" cy="568" r="5"/><circle cx="720" cy="586" r="5.5"/><circle cx="800" cy="590" r="5"/>
+      <circle cx="880" cy="580" r="5"/><circle cx="960" cy="568" r="5.5"/><circle cx="1040" cy="582" r="5"/>
+      <circle cx="1120" cy="590" r="5"/><circle cx="1200" cy="580" r="5.5"/><circle cx="1280" cy="568" r="5"/>
+      <circle cx="1360" cy="582" r="5"/><circle cx="1440" cy="590" r="5.5"/><circle cx="1520" cy="572" r="5"/>
+      <circle cx="1600" cy="560" r="5"/>
+    </g>
+    <!-- Row 2 bulbs (lighter, mixed cream) -->
+    <g fill="#FFF5A0">
+      <circle cx="440" cy="618" r="4.5"/><circle cx="560" cy="640" r="5"/><circle cx="680" cy="635" r="4.5"/>
+      <circle cx="800" cy="650" r="5"/><circle cx="920" cy="640" r="4.5"/><circle cx="1040" cy="650" r="5"/>
+      <circle cx="1160" cy="638" r="4.5"/><circle cx="1280" cy="648" r="5"/><circle cx="1400" cy="635" r="4.5"/>
+      <circle cx="1520" cy="618" r="5"/>
+    </g>
+    <!-- Row 3 bulbs (warm white) -->
+    <g fill="#FFFDE0">
+      <circle cx="500" cy="668" r="4.5"/><circle cx="640" cy="682" r="5"/><circle cx="780" cy="680" r="4.5"/>
+      <circle cx="960" cy="688" r="5"/><circle cx="1140" cy="680" r="4.5"/><circle cx="1280" cy="682" r="5"/>
+      <circle cx="1440" cy="668" r="4.5"/>
+    </g>
+  </g>
+
+  <!-- ================================================================
+       7. ORNATE DRAPED PERGOLA POSTS with floral swags
+       ================================================================ -->
+  <!-- Left pergola post -->
+  <g transform="translate(390, 480)">
+    <rect x="-10" y="0" width="20" height="260" fill="url(#goldTrim)" opacity="0.7"/>
+    <rect x="-12" y="-10" width="24" height="16" rx="3" fill="#C9A24B" opacity="0.9"/>
+    <rect x="-12" y="254" width="24" height="16" rx="3" fill="#C9A24B" opacity="0.9"/>
+    <!-- Floral swag (fabric drape) -->
+    <path d="M -60 -8 Q 0 30 60 -8" fill="none" stroke="#C9A24B" stroke-width="3" opacity="0.6"/>
+    <path d="M -60 -8 Q 0 50 60 -8" fill="#8C2050" opacity="0.25"/>
+    <!-- Rose cluster at top -->
+    <circle cx="-10" cy="-18" r="8" fill="#C0344A" opacity="0.75"/>
+    <circle cx="2" cy="-20" r="6" fill="#D04060" opacity="0.8"/>
+    <circle cx="12" cy="-15" r="7" fill="#A0283C" opacity="0.7"/>
+    <circle cx="0" cy="-15" r="4" fill="#FFB0C0" opacity="0.6"/>
+  </g>
+  <!-- Right pergola post -->
+  <g transform="translate(1530, 480)">
+    <rect x="-10" y="0" width="20" height="260" fill="url(#goldTrim)" opacity="0.7"/>
+    <rect x="-12" y="-10" width="24" height="16" rx="3" fill="#C9A24B" opacity="0.9"/>
+    <rect x="-12" y="254" width="24" height="16" rx="3" fill="#C9A24B" opacity="0.9"/>
+    <path d="M -60 -8 Q 0 30 60 -8" fill="none" stroke="#C9A24B" stroke-width="3" opacity="0.6"/>
+    <path d="M -60 -8 Q 0 50 60 -8" fill="#8C2050" opacity="0.25"/>
+    <circle cx="-10" cy="-18" r="8" fill="#C0344A" opacity="0.75"/>
+    <circle cx="2" cy="-20" r="6" fill="#D04060" opacity="0.8"/>
+    <circle cx="12" cy="-15" r="7" fill="#A0283C" opacity="0.7"/>
+    <circle cx="0" cy="-15" r="4" fill="#FFB0C0" opacity="0.6"/>
+  </g>
+  <!-- Center-left pergola post -->
+  <g transform="translate(685, 490)">
+    <rect x="-8" y="0" width="16" height="240" fill="url(#goldTrim)" opacity="0.55"/>
+    <rect x="-10" y="-8" width="20" height="12" rx="2" fill="#C9A24B" opacity="0.85"/>
+    <circle cx="0" cy="-14" r="5" fill="#D04060" opacity="0.7"/>
+  </g>
+  <!-- Center-right pergola post -->
+  <g transform="translate(1238, 490)">
+    <rect x="-8" y="0" width="16" height="240" fill="url(#goldTrim)" opacity="0.55"/>
+    <rect x="-10" y="-8" width="20" height="12" rx="2" fill="#C9A24B" opacity="0.85"/>
+    <circle cx="0" cy="-14" r="5" fill="#D04060" opacity="0.7"/>
+  </g>
+
+  <!-- ================================================================
+       8. ROYAL FINE-DINING BANQUET TABLES (3 tables, richly dressed)
+       ================================================================ -->
+
+  <!-- === LEFT BANQUET TABLE === -->
+  <g id="tableL" transform="translate(380, 680)">
+    <!-- Tablecloth + gathered skirt -->
+    <polygon points="0,0 310,0 326,68 -16,68" fill="url(#linen)" stroke="#D8C8A0" stroke-width="1.5"/>
+    <polygon points="-16,68 326,68 338,88 -28,88" fill="url(#linenSide)"/>
+    <!-- Gold fringe hem -->
+    <path d="M -28 88 Q -14 97 0 88 Q 14 97 28 88 Q 42 97 56 88 Q 70 97 84 88 Q 98 97 112 88 Q 126 97 140 88 Q 154 97 168 88 Q 182 97 196 88 Q 210 97 224 88 Q 238 97 252 88 Q 266 97 280 88 Q 294 97 308 88 Q 322 97 338 88"
+          fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+    <!-- Tablecloth gold edge border line -->
+    <polygon points="0,0 310,0 326,68 -16,68" fill="none" stroke="#C9A24B" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- CANDELABRA CENTER (3-arm) -->
+    <g transform="translate(155, -18)" filter="url(#glow)">
+      <rect x="-3" y="4" width="6" height="22" fill="#C9A24B"/>
+      <ellipse cx="0" cy="26" rx="12" ry="4" fill="#C9A24B"/>
+      <path d="M -24 10 Q 0 18 24 10" fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+      <path d="M -24 10 C -26 2 -18 -2 -24 -8" fill="none" stroke="#C9A24B" stroke-width="2"/>
+      <path d="M 24 10 C 26 2 18 -2 24 -8" fill="none" stroke="#C9A24B" stroke-width="2"/>
+      <!-- Candles white -->
+      <rect x="-27" y="-14" width="6" height="12" rx="1" fill="#FFFFFF"/>
+      <rect x="-3" y="-22" width="6" height="14" rx="1" fill="#FFFFFF"/>
+      <rect x="21" y="-14" width="6" height="12" rx="1" fill="#FFFFFF"/>
+      <!-- Flames -->
+      <circle cx="-24" cy="-15" r="7" fill="url(#flameGlow)"/>
+      <circle cx="0" cy="-24" r="8" fill="url(#flameGlow)"/>
+      <circle cx="24" cy="-15" r="7" fill="url(#flameGlow)"/>
+      <!-- Flame light pool on table -->
+      <ellipse cx="0" cy="10" rx="38" ry="12" fill="#FFD868" opacity="0.18"/>
+    </g>
+
+    <!-- CLOCHES (silver domed dish covers) -->
+    <ellipse cx="55" cy="1" rx="22" ry="5" fill="#C9A24B"/>
+    <path d="M 37 1 C 37 -14 73 -14 73 1 Z" fill="#E8E8E0" stroke="#A0A0A0" stroke-width="1"/>
+    <circle cx="55" cy="-14" r="3" fill="#C9A24B"/>
+    <ellipse cx="255" cy="1" rx="22" ry="5" fill="#C9A24B"/>
+    <path d="M 237 1 C 237 -14 273 -14 273 1 Z" fill="#E8E8E0" stroke="#A0A0A0" stroke-width="1"/>
+    <circle cx="255" cy="-14" r="3" fill="#C9A24B"/>
+
+    <!-- Wine goblets (crystal clear) -->
+    <g opacity="0.88">
+      <!-- Goblet 1 -->
+      <path d="M 95 1 Q 95 -10 108 -12 Q 121 -10 121 1 Z" fill="#D0EAF8" stroke="#A8C8E0" stroke-width="1"/>
+      <line x1="108" y1="1" x2="108" y2="10" stroke="#D0EAF8" stroke-width="1.5"/>
+      <ellipse cx="108" cy="10" rx="7" ry="2" fill="#A8C8E0"/>
+      <!-- Goblet 2 -->
+      <path d="M 185 1 Q 185 -10 198 -12 Q 211 -10 211 1 Z" fill="#D0EAF8" stroke="#A8C8E0" stroke-width="1"/>
+      <line x1="198" y1="1" x2="198" y2="10" stroke="#D0EAF8" stroke-width="1.5"/>
+      <ellipse cx="198" cy="10" rx="7" ry="2" fill="#A8C8E0"/>
+    </g>
+
+    <!-- Rose petal scatter on tablecloth -->
+    <ellipse cx="80" cy="20" rx="5" ry="3" fill="url(#rosePetal)" transform="rotate(-20,80,20)" opacity="0.85"/>
+    <ellipse cx="230" cy="22" rx="5" ry="3" fill="url(#rosePetal)" transform="rotate(15,230,22)" opacity="0.85"/>
+    <ellipse cx="155" cy="30" rx="4" ry="2.5" fill="url(#rosePetal)" transform="rotate(5,155,30)" opacity="0.75"/>
+  </g>
+
+  <!-- === CENTER BANQUET TABLE (longer, grandest) === -->
+  <g id="tableC" transform="translate(720, 710)">
+    <polygon points="0,0 480,0 500,70 -20,70" fill="url(#linen)" stroke="#D8C8A0" stroke-width="1.5"/>
+    <polygon points="-20,70 500,70 515,92 -35,92" fill="url(#linenSide)"/>
+    <!-- Fringe hem -->
+    <path d="M -35 92 Q -20 101 -5 92 Q 10 101 25 92 Q 40 101 55 92 Q 70 101 85 92 Q 100 101 115 92 Q 130 101 145 92 Q 160 101 175 92 Q 190 101 205 92 Q 220 101 235 92 Q 250 101 265 92 Q 280 101 295 92 Q 310 101 325 92 Q 340 101 355 92 Q 370 101 385 92 Q 400 101 415 92 Q 430 101 445 92 Q 460 101 475 92 Q 490 101 505 92 Q 520 101 535 92"
+          fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+    <polygon points="0,0 480,0 500,70 -20,70" fill="none" stroke="#C9A24B" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- GRAND CANDELABRA (5-arm, tall) -->
+    <g transform="translate(240, -28)" filter="url(#glow)">
+      <rect x="-3" y="6" width="6" height="30" fill="#C9A24B"/>
+      <ellipse cx="0" cy="36" rx="16" ry="5" fill="#C9A24B"/>
+      <path d="M -38 12 Q 0 22 38 12" fill="none" stroke="#C9A24B" stroke-width="3"/>
+      <path d="M -18 8 Q 0 16 18 8" fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+      <!-- Outer arms up-curve -->
+      <path d="M -38 12 C -42 2 -34 -4 -38 -12" fill="none" stroke="#C9A24B" stroke-width="2"/>
+      <path d="M 38 12 C 42 2 34 -4 38 -12" fill="none" stroke="#C9A24B" stroke-width="2"/>
+      <path d="M -18 8 C -20 0 -14 -4 -18 -10" fill="none" stroke="#C9A24B" stroke-width="2"/>
+      <path d="M 18 8 C 20 0 14 -4 18 -10" fill="none" stroke="#C9A24B" stroke-width="2"/>
+      <!-- 5 White candles -->
+      <rect x="-41" y="-20" width="6" height="12" rx="1" fill="#FFFFFF"/>
+      <rect x="-21" y="-18" width="6" height="12" rx="1" fill="#FFFFFF"/>
+      <rect x="-3" y="-26" width="6" height="16" rx="1" fill="#FFFFFF"/>
+      <rect x="15" y="-18" width="6" height="12" rx="1" fill="#FFFFFF"/>
+      <rect x="35" y="-20" width="6" height="12" rx="1" fill="#FFFFFF"/>
+      <!-- Flames -->
+      <circle cx="-38" cy="-20" r="8" fill="url(#flameGlow)"/>
+      <circle cx="-18" cy="-18" r="8" fill="url(#flameGlow)"/>
+      <circle cx="0" cy="-28" r="10" fill="url(#flameGlow)"/>
+      <circle cx="18" cy="-18" r="8" fill="url(#flameGlow)"/>
+      <circle cx="38" cy="-20" r="8" fill="url(#flameGlow)"/>
+      <!-- Candelabra light pool -->
+      <ellipse cx="0" cy="14" rx="58" ry="15" fill="#FFD868" opacity="0.2"/>
+    </g>
+
+    <!-- 4 Cloches -->
+    <ellipse cx="65" cy="1" rx="24" ry="5" fill="#C9A24B"/>
+    <path d="M 45 1 C 45 -16 85 -16 85 1 Z" fill="#E8E8E0" stroke="#A0A0A0" stroke-width="1"/>
+    <circle cx="65" cy="-16" r="3.5" fill="#C9A24B"/>
+    <ellipse cx="175" cy="1" rx="24" ry="5" fill="#C9A24B"/>
+    <path d="M 155 1 C 155 -16 195 -16 195 1 Z" fill="#E8E8E0" stroke="#A0A0A0" stroke-width="1"/>
+    <circle cx="175" cy="-16" r="3.5" fill="#C9A24B"/>
+    <ellipse cx="305" cy="1" rx="24" ry="5" fill="#C9A24B"/>
+    <path d="M 285 1 C 285 -16 325 -16 325 1 Z" fill="#E8E8E0" stroke="#A0A0A0" stroke-width="1"/>
+    <circle cx="305" cy="-16" r="3.5" fill="#C9A24B"/>
+    <ellipse cx="415" cy="1" rx="24" ry="5" fill="#C9A24B"/>
+    <path d="M 395 1 C 395 -16 435 -16 435 1 Z" fill="#E8E8E0" stroke="#A0A0A0" stroke-width="1"/>
+    <circle cx="415" cy="-16" r="3.5" fill="#C9A24B"/>
+
+    <!-- Crystal goblets (4 pairs) -->
+    <g opacity="0.88">
+      <path d="M 115 1 Q 115 -11 128 -13 Q 141 -11 141 1 Z" fill="#D0EAF8" stroke="#A8C8E0" stroke-width="1"/>
+      <line x1="128" y1="1" x2="128" y2="10" stroke="#D0EAF8" stroke-width="1.5"/>
+      <ellipse cx="128" cy="10" rx="8" ry="2" fill="#A8C8E0"/>
+      <path d="M 230 1 Q 230 -11 243 -13 Q 256 -11 256 1 Z" fill="#D0EAF8" stroke="#A8C8E0" stroke-width="1"/>
+      <line x1="243" y1="1" x2="243" y2="10" stroke="#D0EAF8" stroke-width="1.5"/>
+      <ellipse cx="243" cy="10" rx="8" ry="2" fill="#A8C8E0"/>
+      <path d="M 345 1 Q 345 -11 358 -13 Q 371 -11 371 1 Z" fill="#D0EAF8" stroke="#A8C8E0" stroke-width="1"/>
+      <line x1="358" y1="1" x2="358" y2="10" stroke="#D0EAF8" stroke-width="1.5"/>
+      <ellipse cx="358" cy="10" rx="8" ry="2" fill="#A8C8E0"/>
+      <path d="M 448 1 Q 448 -11 461 -13 Q 474 -11 474 1 Z" fill="#D0EAF8" stroke="#A8C8E0" stroke-width="1"/>
+      <line x1="461" y1="1" x2="461" y2="10" stroke="#D0EAF8" stroke-width="1.5"/>
+      <ellipse cx="461" cy="10" rx="8" ry="2" fill="#A8C8E0"/>
+    </g>
+
+    <!-- Rose petals -->
+    <ellipse cx="100" cy="22" rx="6" ry="3.5" fill="url(#rosePetal)" transform="rotate(-25,100,22)" opacity="0.85"/>
+    <ellipse cx="240" cy="28" rx="6" ry="3.5" fill="url(#rosePetal)" transform="rotate(10,240,28)" opacity="0.8"/>
+    <ellipse cx="380" cy="20" rx="5" ry="3" fill="url(#rosePetal)" transform="rotate(-10,380,20)" opacity="0.85"/>
+    <ellipse cx="460" cy="30" rx="5" ry="3" fill="url(#rosePetal)" transform="rotate(20,460,30)" opacity="0.75"/>
+    <!-- Rose bouquet centerpiece vase -->
+    <ellipse cx="240" cy="2" rx="15" ry="4" fill="#8C6A22"/>
+    <rect x="232" y="-14" width="16" height="16" rx="3" fill="#6A3A1A"/>
+    <circle cx="240" cy="-20" r="5" fill="#C0344A" opacity="0.85"/>
+    <circle cx="232" cy="-16" r="4" fill="#D04060" opacity="0.8"/>
+    <circle cx="248" cy="-16" r="4" fill="#A8283A" opacity="0.8"/>
+    <circle cx="236" cy="-24" r="3.5" fill="#FFB0C0" opacity="0.7"/>
+    <circle cx="244" cy="-24" r="3" fill="#C0344A" opacity="0.75"/>
+  </g>
+
+  <!-- === RIGHT BANQUET TABLE === -->
+  <g id="tableR" transform="translate(1210, 680)">
+    <polygon points="0,0 310,0 326,68 -16,68" fill="url(#linen)" stroke="#D8C8A0" stroke-width="1.5"/>
+    <polygon points="-16,68 326,68 338,88 -28,88" fill="url(#linenSide)"/>
+    <path d="M -28 88 Q -14 97 0 88 Q 14 97 28 88 Q 42 97 56 88 Q 70 97 84 88 Q 98 97 112 88 Q 126 97 140 88 Q 154 97 168 88 Q 182 97 196 88 Q 210 97 224 88 Q 238 97 252 88 Q 266 97 280 88 Q 294 97 308 88 Q 322 97 338 88"
+          fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+    <polygon points="0,0 310,0 326,68 -16,68" fill="none" stroke="#C9A24B" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- CANDELABRA -->
+    <g transform="translate(155, -18)" filter="url(#glow)">
+      <rect x="-3" y="4" width="6" height="22" fill="#C9A24B"/>
+      <ellipse cx="0" cy="26" rx="12" ry="4" fill="#C9A24B"/>
+      <path d="M -24 10 Q 0 18 24 10" fill="none" stroke="#C9A24B" stroke-width="2.5"/>
+      <path d="M -24 10 C -26 2 -18 -2 -24 -8" fill="none" stroke="#C9A24B" stroke-width="2"/>
+      <path d="M 24 10 C 26 2 18 -2 24 -8" fill="none" stroke="#C9A24B" stroke-width="2"/>
+      <rect x="-27" y="-14" width="6" height="12" rx="1" fill="#FFFFFF"/>
+      <rect x="-3" y="-22" width="6" height="14" rx="1" fill="#FFFFFF"/>
+      <rect x="21" y="-14" width="6" height="12" rx="1" fill="#FFFFFF"/>
+      <circle cx="-24" cy="-15" r="7" fill="url(#flameGlow)"/>
+      <circle cx="0" cy="-24" r="8" fill="url(#flameGlow)"/>
+      <circle cx="24" cy="-15" r="7" fill="url(#flameGlow)"/>
+      <ellipse cx="0" cy="10" rx="38" ry="12" fill="#FFD868" opacity="0.18"/>
+    </g>
+
+    <!-- Cloches -->
+    <ellipse cx="55" cy="1" rx="22" ry="5" fill="#C9A24B"/>
+    <path d="M 37 1 C 37 -14 73 -14 73 1 Z" fill="#E8E8E0" stroke="#A0A0A0" stroke-width="1"/>
+    <circle cx="55" cy="-14" r="3" fill="#C9A24B"/>
+    <ellipse cx="255" cy="1" rx="22" ry="5" fill="#C9A24B"/>
+    <path d="M 237 1 C 237 -14 273 -14 273 1 Z" fill="#E8E8E0" stroke="#A0A0A0" stroke-width="1"/>
+    <circle cx="255" cy="-14" r="3" fill="#C9A24B"/>
+
+    <!-- Goblets -->
+    <g opacity="0.88">
+      <path d="M 95 1 Q 95 -10 108 -12 Q 121 -10 121 1 Z" fill="#D0EAF8" stroke="#A8C8E0" stroke-width="1"/>
+      <line x1="108" y1="1" x2="108" y2="10" stroke="#D0EAF8" stroke-width="1.5"/>
+      <ellipse cx="108" cy="10" rx="7" ry="2" fill="#A8C8E0"/>
+      <path d="M 185 1 Q 185 -10 198 -12 Q 211 -10 211 1 Z" fill="#D0EAF8" stroke="#A8C8E0" stroke-width="1"/>
+      <line x1="198" y1="1" x2="198" y2="10" stroke="#D0EAF8" stroke-width="1.5"/>
+      <ellipse cx="198" cy="10" rx="7" ry="2" fill="#A8C8E0"/>
+    </g>
+
+    <!-- Rose petals -->
+    <ellipse cx="80" cy="20" rx="5" ry="3" fill="url(#rosePetal)" transform="rotate(18,80,20)" opacity="0.85"/>
+    <ellipse cx="230" cy="22" rx="5" ry="3" fill="url(#rosePetal)" transform="rotate(-12,230,22)" opacity="0.85"/>
+    <ellipse cx="155" cy="30" rx="4" ry="2.5" fill="url(#rosePetal)" transform="rotate(5,155,30)" opacity="0.75"/>
+  </g>
+
+  <!-- ================================================================
+       9. CLASSICAL BALUSTRADE + GOLD COACH LANTERNS
+       ================================================================ -->
+  <g id="balustrade">
+    <!-- Stone balustrade base -->
+    <path d="M 0 840 Q 480 814 960 828 T 1920 840 L 1920 1080 L 0 1080 Z" fill="url(#fgGround)"/>
+    <!-- Main handrail top -->
+    <path d="M 0 840 Q 480 814 960 828 T 1920 840" stroke="#3E1428" stroke-width="10" fill="none"/>
+    <!-- Gold handrail trim line -->
+    <path d="M 0 840 Q 480 814 960 828 T 1920 840" stroke="#C9A24B" stroke-width="2" fill="none" opacity="0.7"/>
+
+    <!-- Stone baluster columns -->
+    <g fill="#280A18" stroke="#3A1225" stroke-width="1">
+      <rect x="285" y="818" width="16" height="30" rx="3"/>
+      <rect x="560" y="820" width="16" height="28" rx="3"/>
+      <rect x="840" y="818" width="16" height="28" rx="3"/>
+      <rect x="1070" y="819" width="16" height="28" rx="3"/>
+      <rect x="1348" y="820" width="16" height="28" rx="3"/>
+      <rect x="1620" y="818" width="16" height="30" rx="3"/>
+    </g>
+    <!-- Gold cap on balusters -->
+    <g fill="#C9A24B" opacity="0.7">
+      <rect x="283" y="815" width="20" height="4" rx="1"/>
+      <rect x="558" y="817" width="20" height="4" rx="1"/>
+      <rect x="838" y="815" width="20" height="4" rx="1"/>
+      <rect x="1068" y="816" width="20" height="4" rx="1"/>
+      <rect x="1346" y="817" width="20" height="4" rx="1"/>
+      <rect x="1618" y="815" width="20" height="4" rx="1"/>
+    </g>
+
+    <!-- COACH LANTERNS (ornate, glowing) -->
+    <!-- Lantern Left -->
+    <g transform="translate(290, 790)" filter="url(#glow)">
+      <ellipse cx="0" cy="45" rx="40" ry="18" fill="url(#chandGlow)" opacity="0.65"/>
+      <line x1="0" y1="-10" x2="0" y2="4" stroke="#C9A24B" stroke-width="2.5"/>
+      <polygon points="-15,4 0,-6 15,4" fill="#C9A24B"/>
+      <rect x="-13" y="4" width="26" height="30" rx="4" fill="#2A0810" stroke="#C9A24B" stroke-width="2"/>
+      <rect x="-10" y="8" width="20" height="22" rx="2" fill="url(#winGlow)" opacity="0.9"/>
+      <rect x="-15" y="34" width="30" height="6" rx="2" fill="#C9A24B"/>
+      <!-- Lantern glow aura -->
+      <circle cx="0" cy="22" r="18" fill="#FFE070" opacity="0.1"/>
+    </g>
+    <!-- Lantern Center-left -->
+    <g transform="translate(700, 798)" filter="url(#glow)">
+      <ellipse cx="0" cy="42" rx="35" ry="15" fill="url(#chandGlow)" opacity="0.6"/>
+      <line x1="0" y1="-8" x2="0" y2="4" stroke="#C9A24B" stroke-width="2"/>
+      <polygon points="-13,4 0,-5 13,4" fill="#C9A24B"/>
+      <rect x="-11" y="4" width="22" height="28" rx="3" fill="#2A0810" stroke="#C9A24B" stroke-width="1.8"/>
+      <rect x="-8" y="8" width="16" height="20" rx="2" fill="url(#winGlow)" opacity="0.9"/>
+      <rect x="-13" y="32" width="26" height="5" rx="2" fill="#C9A24B"/>
+    </g>
+    <!-- Lantern Center-right -->
+    <g transform="translate(1222, 797)" filter="url(#glow)">
+      <ellipse cx="0" cy="42" rx="35" ry="15" fill="url(#chandGlow)" opacity="0.6"/>
+      <line x1="0" y1="-8" x2="0" y2="4" stroke="#C9A24B" stroke-width="2"/>
+      <polygon points="-13,4 0,-5 13,4" fill="#C9A24B"/>
+      <rect x="-11" y="4" width="22" height="28" rx="3" fill="#2A0810" stroke="#C9A24B" stroke-width="1.8"/>
+      <rect x="-8" y="8" width="16" height="20" rx="2" fill="url(#winGlow)" opacity="0.9"/>
+      <rect x="-13" y="32" width="26" height="5" rx="2" fill="#C9A24B"/>
+    </g>
+    <!-- Lantern Right -->
+    <g transform="translate(1627, 790)" filter="url(#glow)">
+      <ellipse cx="0" cy="45" rx="40" ry="18" fill="url(#chandGlow)" opacity="0.65"/>
+      <line x1="0" y1="-10" x2="0" y2="4" stroke="#C9A24B" stroke-width="2.5"/>
+      <polygon points="-15,4 0,-6 15,4" fill="#C9A24B"/>
+      <rect x="-13" y="4" width="26" height="30" rx="4" fill="#2A0810" stroke="#C9A24B" stroke-width="2"/>
+      <rect x="-10" y="8" width="20" height="22" rx="2" fill="url(#winGlow)" opacity="0.9"/>
+      <rect x="-15" y="34" width="30" height="6" rx="2" fill="#C9A24B"/>
+      <circle cx="0" cy="22" r="18" fill="#FFE070" opacity="0.1"/>
+    </g>
+  </g>
+
+  <!-- ================================================================
+       10. AMBIENT SPARKLES — fireflies, gold bokeh, rose petals falling
+       ================================================================ -->
+  <!-- Gold bokeh floating -->
+  <g fill="#FFE894" filter="url(#softGlow)">
+    <circle cx="410" cy="728" r="3"/><circle cx="535" cy="755" r="2.5"/><circle cx="660" cy="732" r="3.5"/>
+    <circle cx="785" cy="762" r="2.5"/><circle cx="910" cy="740" r="3"/><circle cx="1035" cy="764" r="2.5"/>
+    <circle cx="1162" cy="748" r="3.5"/><circle cx="1286" cy="758" r="2.5"/><circle cx="1412" cy="732" r="3"/>
+    <circle cx="1540" cy="752" r="2.5"/><circle cx="472" cy="635" r="2"/><circle cx="742" cy="618" r="2.5"/>
+    <circle cx="1012" cy="630" r="2"/><circle cx="1298" cy="622" r="2.5"/><circle cx="1566" cy="638" r="2"/>
+  </g>
+
+  <!-- Floating rose petals (scattered at mid-air) -->
+  <g opacity="0.7">
+    <ellipse cx="460" cy="760" rx="7" ry="4" fill="#C0344A" transform="rotate(-30,460,760)"/>
+    <ellipse cx="610" cy="742" rx="6" ry="3.5" fill="#D04060" transform="rotate(15,610,742)"/>
+    <ellipse cx="880" cy="722" rx="7" ry="4" fill="#B02840" transform="rotate(-10,880,722)"/>
+    <ellipse cx="1098" cy="750" rx="6" ry="3.5" fill="#C03050" transform="rotate(25,1098,750)"/>
+    <ellipse cx="1360" cy="732" rx="7" ry="4" fill="#D04060" transform="rotate(-18,1360,732)"/>
+    <ellipse cx="1510" cy="748" rx="6" ry="3.5" fill="#A82840" transform="rotate(8,1510,748)"/>
+  </g>
+
+  <!-- Extra ambient sparkle stars at mid-height for depth -->
+  <g fill="#FFF5C0" opacity="0.55">
+    <circle cx="380" cy="528" r="1.5"/><circle cx="560" cy="512" r="1.2"/><circle cx="740" cy="542" r="1.5"/>
+    <circle cx="920" cy="520" r="1.2"/><circle cx="1100" cy="535" r="1.5"/><circle cx="1280" cy="510" r="1.2"/>
+    <circle cx="1460" cy="528" r="1.5"/>
+  </g>
+
+</svg>

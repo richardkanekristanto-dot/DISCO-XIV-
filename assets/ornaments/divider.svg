@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 40" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dividerGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9A24B" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#C9A24B" stop-opacity="0.6"/>
+      <stop offset="45%" stop-color="#F4E7C5"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#F4E7C5"/>
+      <stop offset="80%" stop-color="#C9A24B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C9A24B" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="solidGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAF1D9"/>
+      <stop offset="50%" stop-color="#C9A24B"/>
+      <stop offset="100%" stop-color="#785513"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Horizontal Tapering Lines -->
+  <!-- Upper fine line -->
+  <line x1="20" y1="18" x2="250" y2="18" stroke="url(#dividerGold)" stroke-width="1.2"/>
+  <line x1="350" y1="18" x2="580" y2="18" stroke="url(#dividerGold)" stroke-width="1.2"/>
+  
+  <!-- Lower subtle hairline -->
+  <line x1="80" y1="22" x2="240" y2="22" stroke="url(#dividerGold)" stroke-width="0.8" opacity="0.6"/>
+  <line x1="360" y1="22" x2="520" y2="22" stroke="url(#dividerGold)" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Left Scrollwork Flourish -->
+  <path d="M 270 20 C 260 20, 245 10, 235 20 C 245 28, 255 22, 265 20" fill="none" stroke="url(#solidGold)" stroke-width="1.5"/>
+  <circle cx="232" cy="20" r="2" fill="url(#solidGold)"/>
+  
+  <!-- Right Scrollwork Flourish -->
+  <path d="M 330 20 C 340 20, 355 10, 365 20 C 355 28, 345 22, 335 20" fill="none" stroke="url(#solidGold)" stroke-width="1.5"/>
+  <circle cx="368" cy="20" r="2" fill="url(#solidGold)"/>
+
+  <!-- Center Motif: Royal Fleur-de-lis / Diamond Crest -->
+  <g transform="translate(300, 20)">
+    <!-- Central Rhombus Diamond -->
+    <polygon points="0,-14 12,0 0,14 -12,0" fill="url(#solidGold)" stroke="#5A3F0B" stroke-width="1"/>
+    <!-- Inner diamond cut -->
+    <polygon points="0,-8 7,0 0,8 -7,0" fill="#4A0E1B"/>
+    <circle cx="0" cy="0" r="2.5" fill="#FAF1D9"/>
+    
+    <!-- Mini Fleur Petals -->
+    <path d="M 0 -14 C -3 -22, 3 -22, 0 -14 Z" fill="url(#solidGold)"/>
+    <path d="M 0 14 C -3 22, 3 22, 0 14 Z" fill="url(#solidGold)"/>
+
+    <!-- Left & Right Wing Accents -->
+    <circle cx="-18" cy="0" r="2" fill="url(#solidGold)"/>
+    <circle cx="18" cy="0" r="2" fill="url(#solidGold)"/>
+  </g>
+</svg>

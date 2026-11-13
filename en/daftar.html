@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DISCO XIV RSVP Registration - Accept the imperial invitation to the HIMSI UMN royal outbound gathering at the highland villa. Multi-step registration form.">
+  <title>RSVP Registration - DISCO XIV | HIMSI UMN</title>
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core CSS Files -->
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/logo-disco-xiv.svg">
+</head>
+<body>
+  <!-- Accessible Skip to Content -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Mobile Nav Checkbox Hack -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+
+  <!-- Floating Pill Navbar -->
+  <header class="site-header">
+    <nav class="navbar-pill" aria-label="Main Navigation">
+      <!-- Left: Logo & Title -->
+      <a href="index.html" class="navbar-brand" aria-label="DISCO XIV Home">
+        <img src="../assets/logo-disco-xiv.svg" alt="DISCO XIV Crest Logo" class="navbar-logo-img" width="42" height="42">
+        <span class="navbar-title-text">DISCO XIV</span>
+      </a>
+
+      <!-- Center: Navigation Pill Links -->
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-pill-link">Home</a></li>
+        <li><a href="divisi.html" class="nav-pill-link">Divisions</a></li>
+        <li><a href="masuk.html" class="nav-pill-link">Login</a></li>
+        <li><a href="daftar.html" class="nav-pill-link active" aria-current="page">Register</a></li>
+      </ul>
+
+      <!-- Right: Language Selector Pill -->
+      <div class="navbar-lang-pill" aria-label="Select Language">
+        <a href="../daftar.html" class="lang-switch-btn" aria-label="Switch to Indonesian">ID</a>
+        <a href="daftar.html" class="lang-switch-btn active" aria-label="English (Active)">EN</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open or close navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </nav>
+  </header>
+
+  <!-- Main Content: Royal RSVP Multi-Step Form -->
+  <main id="main-content" class="auth-page-wrap">
+    <div class="container">
+      <article class="parchment-card scroll-reveal" style="max-width: 780px; margin-inline: auto;">
+        <!-- Ornate Corner Flourishes -->
+        <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+        <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+        <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-bl" aria-hidden="true">
+        <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-br" aria-hidden="true">
+
+        <div class="auth-header" style="text-align: center;">
+          <span class="eyebrow">Invitation Response (RSVP)</span>
+          <h1 class="auth-title">Noble Guest Registration</h1>
+          <p class="auth-subtitle">"One Table, Endless Stories" — Reserve Your Seat at The Villa Feast</p>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+
+        <!-- Pure CSS Multi-Step Stepper (Radio Hack + :has) -->
+        <form action="#" method="get" class="registration-stepper" novalidate="false">
+          <!-- Hidden Radio Inputs for Step State -->
+          <input type="radio" name="reg-step" id="step-1" checked class="step-radio">
+          <input type="radio" name="reg-step" id="step-2" class="step-radio">
+          <input type="radio" name="reg-step" id="step-3" class="step-radio">
+          <input type="radio" name="reg-step" id="step-success" class="step-radio">
+
+          <!-- Stepper Progress Beads -->
+          <div class="stepper-progress" aria-label="Registration Progress Indicator">
+            <div class="step-indicator">
+              <div class="step-bead">I</div>
+              <div class="step-label">Identity</div>
+            </div>
+            <div class="step-indicator">
+              <div class="step-bead">II</div>
+              <div class="step-label">Division Seat</div>
+            </div>
+            <div class="step-indicator">
+              <div class="step-bead">III</div>
+              <div class="step-label">Confirmation</div>
+            </div>
+          </div>
+
+          <div class="form-body">
+            <!-- ==========================================================
+                 STEP 1: Personal Details
+                 ========================================================== -->
+            <div class="step-panel panel-step-1">
+              <h2 style="font-size: var(--font-size-md); color: var(--color-burgundy-primary); margin-bottom: var(--space-md); text-align: left;">
+                Step 1: Noble Guest Identity
+              </h2>
+
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="reg-name" class="form-label">Full Name (as per Student ID)</label>
+                <input 
+                  type="text" 
+                  id="reg-name" 
+                  name="fullname" 
+                  class="form-input" 
+                  placeholder="e.g. Alexander Vance" 
+                  required 
+                  minlength="3"
+                >
+                <div class="form-hint">Your official name to be engraved on your banquet badge.</div>
+              </div>
+
+              <!-- NIM & Batch Grid -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                <div class="form-group">
+                  <label for="reg-nim" class="form-label">Student ID Number (NIM)</label>
+                  <input 
+                    type="text" 
+                    id="reg-nim" 
+                    name="nim" 
+                    class="form-input" 
+                    placeholder="e.g. 00000089123" 
+                    pattern="[0-9]{11}" 
+                    required
+                  >
+                  <div class="form-hint">11-digit official UMN student number.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="reg-batch" class="form-label">Academic Batch</label>
+                  <select id="reg-batch" name="batch" class="form-select" required>
+                    <option value="" disabled selected>Select Your Academic Batch</option>
+                    <option value="2027">Class of 2027 (Freshmen)</option>
+                    <option value="2026">Class of 2026 (Sophomores)</option>
+                    <option value="2025">Class of 2025 (Juniors)</option>
+                    <option value="2024">Class of 2024 &amp; Seniors</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Email Student & WhatsApp -->
+              <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-md);">
+                <div class="form-group">
+                  <label for="reg-email" class="form-label">Student Email (@student.umn.ac.id)</label>
+                  <input 
+                    type="email" 
+                    id="reg-email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="first.name@student.umn.ac.id" 
+                    required
+                  >
+                  <div class="form-hint">Confirmation dispatches will arrive at this address.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="reg-phone" class="form-label">WhatsApp Contact Number</label>
+                  <input 
+                    type="tel" 
+                    id="reg-phone" 
+                    name="phone" 
+                    class="form-input" 
+                    placeholder="081234567890" 
+                    pattern="[0-9]{10,14}" 
+                    required
+                  >
+                  <div class="form-hint">For coordinating outbound assembly groups.</div>
+                </div>
+              </div>
+
+              <!-- Navigation to Step 2 -->
+              <div class="form-actions">
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);">* All fields are required</span>
+                <label for="step-2" class="btn-royal">
+                  <span>Proceed to Division Choice</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- ==========================================================
+                 STEP 2: Division Preference
+                 ========================================================== -->
+            <div class="step-panel panel-step-2">
+              <h2 style="font-size: var(--font-size-md); color: var(--color-burgundy-primary); margin-bottom: var(--space-md); text-align: left;">
+                Step 2: Division Roles &amp; Committee Seats
+              </h2>
+
+              <p style="font-size: 0.9rem; color: var(--color-text-dark); margin-bottom: var(--space-md); text-align: left;">
+                Select two committee pillars matching your talents and aspiration to serve as banquet curators for DISCO XIV:
+              </p>
+
+              <!-- Division 1 & 2 Choice -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                <div class="form-group">
+                  <label for="reg-div-1" class="form-label">Primary Division Preference</label>
+                  <select id="reg-div-1" name="division_primary" class="form-select" required>
+                    <option value="" disabled selected>Select Primary Division</option>
+                    <option value="acara">Program Division (Flow &amp; Rundown)</option>
+                    <option value="konsumsi">Catering &amp; Feast (Cuisine)</option>
+                    <option value="humas">Public Relations (Envoys &amp; Outreach)</option>
+                    <option value="sponsorship">Sponsorship (Alliances &amp; Funding)</option>
+                    <option value="dokum">Media &amp; Chronicles (Visuals)</option>
+                    <option value="perlengkapan">Logistics &amp; Stage (Infrastructure)</option>
+                    <option value="k3">Health &amp; Security (Royal Guard)</option>
+                    <option value="sekben">Chancellery &amp; Treasury (Governance)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="reg-div-2" class="form-label">Secondary Alternative Preference</label>
+                  <select id="reg-div-2" name="division_secondary" class="form-select" required>
+                    <option value="" disabled selected>Select Alternative Division</option>
+                    <option value="acara">Program Division (Flow &amp; Rundown)</option>
+                    <option value="konsumsi">Catering &amp; Feast (Cuisine)</option>
+                    <option value="humas">Public Relations (Envoys &amp; Outreach)</option>
+                    <option value="sponsorship">Sponsorship (Alliances &amp; Funding)</option>
+                    <option value="dokum">Media &amp; Chronicles (Visuals)</option>
+                    <option value="perlengkapan">Logistics &amp; Stage (Infrastructure)</option>
+                    <option value="k3">Health &amp; Security (Royal Guard)</option>
+                    <option value="sekben">Chancellery &amp; Treasury (Governance)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Motivation Statement -->
+              <div class="form-group">
+                <label for="reg-motivation" class="form-label">Motivation &amp; Outbound Expectations</label>
+                <textarea 
+                  id="reg-motivation" 
+                  name="motivation" 
+                  rows="4" 
+                  class="form-textarea" 
+                  placeholder="Share your goals and what you aspire to experience at this year's royal villa outbound..." 
+                  required 
+                  minlength="15"
+                ></textarea>
+                <div class="form-hint">Minimum 15 characters. Express your authentic enthusiasm.</div>
+              </div>
+
+              <!-- Navigation -->
+              <div class="form-actions">
+                <label for="step-1" class="btn-royal-outline">
+                  <span aria-hidden="true">&larr;</span>
+                  <span>Previous</span>
+                </label>
+                <label for="step-3" class="btn-royal">
+                  <span>Proceed to Confirmation</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- ==========================================================
+                 STEP 3: Confirmation & Pledge
+                 ========================================================== -->
+            <div class="step-panel panel-step-3">
+              <h2 style="font-size: var(--font-size-md); color: var(--color-burgundy-primary); margin-bottom: var(--space-md); text-align: left;">
+                Step 3: Noble Pledge &amp; RSVP Confirmation
+              </h2>
+
+              <div class="goal-menu-item" style="margin-bottom: var(--space-md); text-align: left;">
+                <h3 style="font-size: var(--font-size-sm); color: var(--color-burgundy-primary); margin-bottom: 0.5rem;">
+                  📜 DISCO XIV Guest Pledge:
+                </h3>
+                <p style="font-size: 0.88rem; line-height: 1.6; color: var(--color-text-dark); margin-bottom: 0.5rem;">
+                  1. I declare my commitment to participate actively throughout the DISCO XIV journey (ECHO, DISTALK, Villa Outbound, and Appreciation Gala).
+                </p>
+                <p style="font-size: 0.88rem; line-height: 1.6; color: var(--color-text-dark); margin-bottom: 0.5rem;">
+                  2. I pledge to honor our kinship, maintain mutual respect, and uphold the tranquility, cleanliness, and safety of the highland villa grounds.
+                </p>
+                <p style="font-size: 0.88rem; line-height: 1.6; color: var(--color-text-dark);">
+                  3. All information provided within this response is accurate, truthful, and submitted in good faith.
+                </p>
+              </div>
+
+              <!-- Agreement Checkbox -->
+              <div class="form-group" style="text-align: left;">
+                <label style="display: flex; align-items: flex-start; gap: var(--space-xs); font-size: 0.88rem; color: var(--color-text-dark); cursor: pointer;">
+                  <input type="checkbox" id="reg-agree" name="agree" required style="margin-top: 4px;">
+                  <span>I have read, understood, and solemnly accept the royal banquet pledge above.</span>
+                </label>
+              </div>
+
+              <!-- Navigation -->
+              <div class="form-actions">
+                <label for="step-2" class="btn-royal-outline">
+                  <span aria-hidden="true">&larr;</span>
+                  <span>Review Details</span>
+                </label>
+                <!-- Click sends to the pure CSS success panel -->
+                <label for="step-success" class="btn-royal">
+                  <span>Send Royal RSVP</span>
+                  <span aria-hidden="true">💌</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- ==========================================================
+                 FINAL STATE: Wax Seal Celebration & Acceptance State
+                 ========================================================== -->
+            <div class="step-panel panel-step-success">
+              <div class="success-seal-wrap">
+                <!-- Stamped Wax Seal with CSS Slam Animation -->
+                <img src="../assets/ornaments/wax-seal.svg" alt="DISCO XIV Official Wax Seal Verified" class="wax-seal-stamp" width="120" height="120">
+
+                <span class="eyebrow">Response Verified</span>
+                <h2 style="color: var(--color-burgundy-primary); font-size: var(--font-size-xl); margin-bottom: var(--space-xs);">
+                  Your Invitation Has Been Accepted!
+                </h2>
+                <p class="section-subtitle">
+                  Your official response is now sealed within the Imperial Court of DISCO XIV.
+                </p>
+                <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+                <p style="color: var(--color-text-dark); max-width: 560px; margin-inline: auto; margin-bottom: var(--space-xl); font-size: 0.95rem; line-height: 1.7;">
+                  Thank you for joining our grand gathering. Details regarding squad assignments, division placements, and outbound packing guidelines will be delivered directly to your student email. We look forward to meeting you at the banquet table!
+                </p>
+
+                <div style="display: flex; justify-content: center; gap: var(--space-md); flex-wrap: wrap;">
+                  <a href="index.html" class="btn-royal">
+                    <span>Return to Home</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                  <a href="divisi.html" class="btn-royal-outline">
+                    <span>Explore Other Divisions</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Left: Address & Mascot Badge -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">🏰</span>
+            <span>Secretariat Office</span>
+          </h3>
+          <address class="footer-address">
+            <strong>HIMSI UMN</strong><br>
+            Universitas Multimedia Nusantara<br>
+            Jl. Scientia Boulevard, Gading Serpong<br>
+            Tangerang, Banten 15811
+          </address>
+          <a href="index.html" aria-label="Return to top with Sir Disco">
+            <img src="../assets/mascot-badge.svg" alt="Sir Disco Official Mascot Badge" class="footer-mascot-badge" width="68" height="68">
+          </a>
+        </div>
+
+        <!-- Center: Crest Logo, Tagline, Copyright -->
+        <div class="footer-center">
+          <img src="../assets/logo-disco-xiv.svg" alt="DISCO XIV Crest Logo" class="footer-logo" width="90" height="78">
+          <p class="footer-tagline">"One Table, Endless Stories"</p>
+          <div class="footer-hashtag">#SatuMejaBerjutaCerita</div>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+
+        <!-- Right: Social Media -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">📜</span>
+            <span>Social Chronicles</span>
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--color-parchment-border); margin-bottom: 0.75rem;">
+            Follow our imperial dispatches and live chronicles on social channels:
+          </p>
+          <a href="https://instagram.com/discoumn_si" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Visit Official Instagram @discoumn_si">
+            <span aria-hidden="true">📷</span>
+            <span>@discoumn_si</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="footer-copyright">
+        <p>&copy; 2027 D'Information System Community Outbound. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

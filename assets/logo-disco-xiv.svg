@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" width="100%" height="100%">
+  <defs>
+    <!-- Royal Gold Gradients -->
+    <linearGradient id="goldLinear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4E7C5"/>
+      <stop offset="25%" stop-color="#E6CF8B"/>
+      <stop offset="50%" stop-color="#C9A24B"/>
+      <stop offset="75%" stop-color="#9A7426"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+
+    <linearGradient id="goldMetallic" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="15%" stop-color="#F4E7C5"/>
+      <stop offset="50%" stop-color="#C9A24B"/>
+      <stop offset="85%" stop-color="#8C6A22"/>
+      <stop offset="100%" stop-color="#5E430F"/>
+    </linearGradient>
+
+    <linearGradient id="burgundyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6B1A2B"/>
+      <stop offset="50%" stop-color="#4A0E1B"/>
+      <stop offset="100%" stop-color="#24050C"/>
+    </linearGradient>
+
+    <radialGradient id="shieldGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#8C243A" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1A040A" stop-opacity="0.95"/>
+    </radialGradient>
+
+    <filter id="royalShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Crown on Top -->
+  <g id="crown" filter="url(#royalShadow)">
+    <!-- Base band -->
+    <path d="M 230 75 Q 300 85 370 75 L 365 92 Q 300 100 235 92 Z" fill="url(#goldMetallic)" stroke="#8C6A22" stroke-width="2"/>
+    <ellipse cx="300" cy="88" rx="8" ry="4" fill="#6B1A2B"/>
+    <ellipse cx="265" cy="86" rx="5" ry="3" fill="#0F3D3A"/>
+    <ellipse cx="335" cy="86" rx="5" ry="3" fill="#0F3D3A"/>
+    <!-- Crown Peaks -->
+    <path d="M 235 75 
+             L 210 28 Q 235 48 260 52 
+             L 300 12 
+             L 340 52 Q 365 48 390 28 
+             L 365 75 
+             Q 300 85 235 75 Z" 
+          fill="url(#goldMetallic)" stroke="#8C6A22" stroke-width="2"/>
+    <!-- Jewels on crown peaks -->
+    <circle cx="300" cy="12" r="7" fill="url(#goldLinear)" stroke="#5E430F" stroke-width="1.5"/>
+    <circle cx="300" cy="12" r="4" fill="#6B1A2B"/>
+    <circle cx="210" cy="28" r="5" fill="url(#goldLinear)"/>
+    <circle cx="210" cy="28" r="2.5" fill="#E6CF8B"/>
+    <circle cx="390" cy="28" r="5" fill="url(#goldLinear)"/>
+    <circle cx="390" cy="28" r="2.5" fill="#E6CF8B"/>
+    <!-- Mini cross atop center -->
+    <path d="M 298 0 L 302 0 L 302 5 L 306 5 L 306 8 L 302 8 L 302 12 L 298 12 L 298 8 L 294 8 L 294 5 L 298 5 Z" fill="url(#goldMetallic)"/>
+  </g>
+
+  <!-- Left Laurel Branch -->
+  <g id="left-laurel" fill="url(#goldMetallic)" stroke="#8C6A22" stroke-width="1">
+    <path d="M 170 330 Q 110 240 160 140 Q 150 170 175 220 Q 160 270 170 330 Z" opacity="0.4"/>
+    <!-- Leaves -->
+    <path d="M 160 140 C 130 120 115 140 125 155 C 135 170 155 160 160 140 Z"/>
+    <path d="M 148 165 C 115 155 105 180 118 192 C 130 205 148 190 148 165 Z"/>
+    <path d="M 138 200 C 105 200 100 225 115 235 C 130 245 145 225 138 200 Z"/>
+    <path d="M 135 240 C 105 248 105 275 120 282 C 138 290 148 268 135 240 Z"/>
+    <path d="M 140 280 C 115 295 120 320 135 325 C 152 330 158 305 140 280 Z"/>
+    <path d="M 152 318 C 132 338 142 360 158 360 C 172 360 172 338 152 318 Z"/>
+    <path d="M 170 350 C 155 375 172 395 188 390 C 200 385 195 362 170 350 Z"/>
+  </g>
+
+  <!-- Right Laurel Branch -->
+  <g id="right-laurel" fill="url(#goldMetallic)" stroke="#8C6A22" stroke-width="1" transform="translate(600, 0) scale(-1, 1)">
+    <path d="M 170 330 Q 110 240 160 140 Q 150 170 175 220 Q 160 270 170 330 Z" opacity="0.4"/>
+    <path d="M 160 140 C 130 120 115 140 125 155 C 135 170 155 160 160 140 Z"/>
+    <path d="M 148 165 C 115 155 105 180 118 192 C 130 205 148 190 148 165 Z"/>
+    <path d="M 138 200 C 105 200 100 225 115 235 C 130 245 145 225 138 200 Z"/>
+    <path d="M 135 240 C 105 248 105 275 120 282 C 138 290 148 268 135 240 Z"/>
+    <path d="M 140 280 C 115 295 120 320 135 325 C 152 330 158 305 140 280 Z"/>
+    <path d="M 152 318 C 132 338 142 360 158 360 C 172 360 172 338 152 318 Z"/>
+    <path d="M 170 350 C 155 375 172 395 188 390 C 200 385 195 362 170 350 Z"/>
+  </g>
+
+  <!-- Main Escutcheon / Shield -->
+  <g id="shield" filter="url(#royalShadow)">
+    <!-- Outer Shield Border -->
+    <path d="M 195 95 
+             C 240 90, 360 90, 405 95 
+             C 415 170, 420 240, 395 300 
+             C 365 370, 300 405, 300 405 
+             C 300 405, 235 370, 205 300 
+             C 180 240, 185 170, 195 95 Z" 
+          fill="url(#goldMetallic)" stroke="#8C6A22" stroke-width="4"/>
+
+    <!-- Inner Shield Cavity -->
+    <path d="M 205 107 
+             C 245 102, 355 102, 395 107 
+             C 403 172, 408 235, 385 290 
+             C 358 355, 300 390, 300 390 
+             C 300 390, 242 355, 215 290 
+             C 192 235, 197 172, 205 107 Z" 
+          fill="url(#shieldGlow)" stroke="url(#goldLinear)" stroke-width="2"/>
+
+    <!-- Shield Pattern / Fine Filigree Lines -->
+    <path d="M 215 118 L 385 118" stroke="#C9A24B" stroke-width="1" opacity="0.4"/>
+    <path d="M 300 110 L 300 385" stroke="#C9A24B" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+  </g>
+
+  <!-- Central Banquet Motif: Cloche + Crossed Fork & Knife -->
+  <g id="banquet-motif" filter="url(#goldGlow)">
+    <!-- Crossed Fork and Knife behind cloche -->
+    <!-- Fork (Left tilted) -->
+    <g transform="rotate(-32 300 250)">
+      <!-- Fork handle -->
+      <path d="M 297 325 L 303 325 L 301 220 L 299 220 Z" fill="url(#goldMetallic)"/>
+      <ellipse cx="300" cy="326" rx="4" ry="2" fill="url(#goldLinear)"/>
+      <!-- Fork head & tines -->
+      <path d="M 294 220 C 294 205, 306 205, 306 220 Z" fill="url(#goldMetallic)"/>
+      <rect x="294" y="195" width="2" height="15" fill="url(#goldMetallic)"/>
+      <rect x="298" y="193" width="2" height="17" fill="url(#goldMetallic)"/>
+      <rect x="302" y="193" width="2" height="17" fill="url(#goldMetallic)"/>
+      <rect x="306" y="195" width="2" height="15" fill="url(#goldMetallic)"/>
+    </g>
+
+    <!-- Knife (Right tilted) -->
+    <g transform="rotate(32 300 250)">
+      <!-- Knife handle -->
+      <path d="M 297 325 L 303 325 L 301.5 220 L 298.5 220 Z" fill="url(#goldMetallic)"/>
+      <ellipse cx="300" cy="326" rx="4" ry="2" fill="url(#goldLinear)"/>
+      <!-- Knife blade -->
+      <path d="M 299 220 L 299 188 C 299 185, 306 195, 306 220 Z" fill="url(#goldMetallic)"/>
+    </g>
+
+    <!-- Serving Platter / Salver Base -->
+    <ellipse cx="300" cy="272" rx="66" ry="12" fill="url(#goldMetallic)" stroke="#8C6A22" stroke-width="1.5"/>
+    <ellipse cx="300" cy="270" rx="58" ry="8" fill="#4A0E1B" stroke="url(#goldLinear)" stroke-width="1"/>
+
+    <!-- Royal Cloche (Dome) -->
+    <path d="M 245 266 C 245 200, 355 200, 355 266 Z" fill="url(#goldMetallic)" stroke="#8C6A22" stroke-width="2"/>
+    <!-- Dome specular reflection highlight -->
+    <path d="M 262 258 C 265 218, 305 210, 320 215 C 305 215, 275 225, 270 258 Z" fill="#FFFFFF" opacity="0.6"/>
+    <!-- Cloche Ring Handle -->
+    <circle cx="300" cy="195" r="9" fill="none" stroke="url(#goldMetallic)" stroke-width="3"/>
+    <circle cx="300" cy="204" r="4" fill="url(#goldMetallic)"/>
+
+    <!-- Sparkles on Cloche -->
+    <path d="M 285 240 Q 288 240 288 237 Q 288 240 291 240 Q 288 240 288 243 Q 288 240 285 240 Z" fill="#FFFFFF"/>
+    <path d="M 322 232 Q 325 232 325 229 Q 325 232 328 232 Q 325 232 325 235 Q 325 232 322 232 Z" fill="#FFFFFF"/>
+
+    <!-- Small Royal 8-point Star beneath platter -->
+    <g transform="translate(300, 320) scale(0.8)">
+      <polygon points="0,-16 4,-4 16,0 4,4 0,16 -4,4 -16,0 -4,-4" fill="url(#goldLinear)"/>
+      <circle cx="0" cy="0" r="2.5" fill="#FFFFFF"/>
+    </g>
+    <!-- Subtitle on Shield -->
+    <text x="300" y="352" text-anchor="middle" font-family="'Cinzel', 'Times New Roman', serif" font-size="12" font-weight="700" fill="url(#goldLinear)" letter-spacing="3">HIMSI UMN</text>
+  </g>
+
+  <!-- Ornate Flowing Ribbon at Bottom -->
+  <g id="ribbon" filter="url(#royalShadow)">
+    <!-- Ribbon tails / back folds -->
+    <path d="M 125 435 L 180 395 L 180 445 L 125 470 L 145 450 Z" fill="#380812" stroke="#8C6A22" stroke-width="1.5"/>
+    <path d="M 475 435 L 420 395 L 420 445 L 475 470 L 455 450 Z" fill="#380812" stroke="#8C6A22" stroke-width="1.5"/>
+
+    <!-- Ribbon fold shadows -->
+    <polygon points="175,440 200,440 185,465" fill="#1C0308"/>
+    <polygon points="425,440 400,440 415,465" fill="#1C0308"/>
+
+    <!-- Front Main Ribbon Banner -->
+    <path d="M 155 435 
+             Q 300 460 445 435 
+             L 450 480 
+             Q 300 508 150 480 Z" 
+          fill="url(#goldMetallic)" stroke="#8C6A22" stroke-width="2.5"/>
+    
+    <!-- Inner Ribbon Inlay -->
+    <path d="M 165 443 
+             Q 300 468 435 443 
+             L 440 472 
+             Q 300 498 160 472 Z" 
+          fill="url(#burgundyGradient)" stroke="#8C6A22" stroke-width="1"/>
+
+    <!-- Golden Text "DISCO XIV" -->
+    <text x="300" y="468" text-anchor="middle" font-family="'Cinzel', 'Times New Roman', serif" font-weight="900" font-size="26" fill="url(#goldLinear)" letter-spacing="6" filter="url(#goldGlow)">
+      DISCO XIV
+    </text>
+  </g>
+
+  <!-- Bottom motto rosette / wax seal motif -->
+  <g transform="translate(300, 488) scale(0.65)">
+    <circle cx="0" cy="0" r="16" fill="url(#goldMetallic)" stroke="#5E430F" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="12" fill="#4A0E1B"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'Cinzel', serif" font-size="11" font-weight="bold" fill="url(#goldLinear)">XIV</text>
+  </g>
+</svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Radial Gradients for Table Surface -->
+    <radialGradient id="tableWood" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4F111E"/>
+      <stop offset="35%" stop-color="#380A15"/>
+      <stop offset="70%" stop-color="#24050C"/>
+      <stop offset="92%" stop-color="#140206"/>
+      <stop offset="100%" stop-color="#080103"/>
+    </radialGradient>
+
+    <radialGradient id="tableShine" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFF2CE" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#C9A24B" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.4"/>
+    </radialGradient>
+
+    <linearGradient id="goldRimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF6D6"/>
+      <stop offset="25%" stop-color="#E6CF8B"/>
+      <stop offset="50%" stop-color="#C9A24B"/>
+      <stop offset="75%" stop-color="#8C6A22"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+
+    <filter id="tableDropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Drop Shadow -->
+  <circle cx="400" cy="400" r="390" fill="url(#tableWood)" filter="url(#tableDropShadow)"/>
+
+  <!-- Main Polished Royal Mahogany Tabletop -->
+  <circle cx="400" cy="400" r="388" fill="url(#tableWood)"/>
+  <circle cx="400" cy="400" r="388" fill="url(#tableShine)"/>
+
+  <!-- Outer Carved Gilded Rim with Beading -->
+  <circle cx="400" cy="400" r="386" fill="none" stroke="url(#goldRimGrad)" stroke-width="4"/>
+  <circle cx="400" cy="400" r="380" fill="none" stroke="#661020" stroke-width="6"/>
+  <circle cx="400" cy="400" r="374" fill="none" stroke="url(#goldRimGrad)" stroke-width="2"/>
+
+  <!-- Outer Beaded Dots Ring (120 beads) -->
+  <g fill="url(#goldRimGrad)" opacity="0.85">
+    <!-- Generated decorative accent dots along perimeter -->
+    <circle cx="400" cy="30" r="3"/><circle cx="438" cy="32" r="2.5"/><circle cx="476" cy="39" r="2.5"/>
+    <circle cx="513" cy="50" r="2.5"/><circle cx="548" cy="65" r="2.5"/><circle cx="581" cy="84" r="2.5"/>
+    <circle cx="612" cy="108" r="2.5"/><circle cx="639" cy="135" r="2.5"/><circle cx="663" cy="165" r="2.5"/>
+    <circle cx="682" cy="198" r="2.5"/><circle cx="697" cy="233" r="2.5"/><circle cx="707" cy="269" r="2.5"/>
+    <circle cx="712" cy="306" r="2.5"/><circle cx="712" cy="344" r="2.5"/><circle cx="707" cy="381" r="2.5"/>
+    <circle cx="707" cy="419" r="2.5"/><circle cx="712" cy="456" r="2.5"/><circle cx="712" cy="494" r="2.5"/>
+    <circle cx="707" cy="531" r="2.5"/><circle cx="697" cy="567" r="2.5"/><circle cx="682" cy="602" r="2.5"/>
+    <circle cx="663" cy="635" r="2.5"/><circle cx="639" cy="665" r="2.5"/><circle cx="612" cy="692" r="2.5"/>
+    <circle cx="581" cy="716" r="2.5"/><circle cx="548" cy="735" r="2.5"/><circle cx="513" cy="750" r="2.5"/>
+    <circle cx="476" cy="761" r="2.5"/><circle cx="438" cy="768" r="2.5"/><circle cx="400" cy="770" r="3"/>
+    <circle cx="362" cy="768" r="2.5"/><circle cx="324" cy="761" r="2.5"/><circle cx="287" cy="750" r="2.5"/>
+    <circle cx="252" cy="735" r="2.5"/><circle cx="219" cy="716" r="2.5"/><circle cx="188" cy="692" r="2.5"/>
+    <circle cx="161" cy="665" r="2.5"/><circle cx="137" cy="635" r="2.5"/><circle cx="118" cy="602" r="2.5"/>
+    <circle cx="103" cy="567" r="2.5"/><circle cx="93" cy="531" r="2.5"/><circle cx="88" cy="494" r="2.5"/>
+    <circle cx="88" cy="456" r="2.5"/><circle cx="93" cy="419" r="2.5"/><circle cx="93" cy="381" r="2.5"/>
+    <circle cx="88" cy="344" r="2.5"/><circle cx="88" cy="306" r="2.5"/><circle cx="93" cy="269" r="2.5"/>
+    <circle cx="103" cy="233" r="2.5"/><circle cx="118" cy="198" r="2.5"/><circle cx="137" cy="165" r="2.5"/>
+    <circle cx="161" cy="135" r="2.5"/><circle cx="188" cy="108" r="2.5"/><circle cx="219" cy="84" r="2.5"/>
+    <circle cx="252" cy="65" r="2.5"/><circle cx="287" cy="50" r="2.5"/><circle cx="324" cy="39" r="2.5"/>
+    <circle cx="362" cy="32" r="2.5"/>
+  </g>
+
+  <!-- Inlaid Gold Acanthus Scrollwork Ring (Intermediate Radius) -->
+  <circle cx="400" cy="400" r="350" fill="none" stroke="url(#goldRimGrad)" stroke-width="1.5" stroke-dasharray="14,6" opacity="0.6"/>
+  <circle cx="400" cy="400" r="342" fill="none" stroke="#C9A24B" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Ornate Compass & Star Inlay at Center Core -->
+  <circle cx="400" cy="400" r="200" fill="none" stroke="url(#goldRimGrad)" stroke-width="2" opacity="0.5"/>
+  <circle cx="400" cy="400" r="192" fill="none" stroke="#E6CF8B" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
+  <circle cx="400" cy="400" r="140" fill="none" stroke="url(#goldRimGrad)" stroke-width="2" opacity="0.7"/>
+
+  <!-- 16-point Radiant Inlay Star -->
+  <g stroke="url(#goldRimGrad)" stroke-width="1" opacity="0.35">
+    <line x1="400" y1="205" x2="400" y2="340"/>
+    <line x1="400" y1="460" x2="400" y2="595"/>
+    <line x1="205" y1="400" x2="340" y2="400"/>
+    <line x1="460" y1="400" x2="595" y2="400"/>
+    <line x1="262" y1="262" x2="357" y2="357"/>
+    <line x1="443" y1="443" x2="538" y2="538"/>
+    <line x1="538" y1="262" x2="443" y2="357"/>
+    <line x1="357" y1="443" x2="262" y2="538"/>
+  </g>
+
+  <!-- 9 Banquet Seat Placemark Guides -->
+  <!-- Subtle circular damask plate halos where the 9 charger plates rest -->
+  <g fill="none" stroke="url(#goldRimGrad)" stroke-width="1" opacity="0.25">
+    <!-- 9 plate placement halos at radius 305 -->
+    <!-- Seat 1 (0 deg - Top) -->
+    <circle cx="400" cy="95" r="48" stroke-dasharray="4,4"/>
+    <!-- Seat 2 (40 deg) -->
+    <circle cx="596" cy="166" r="48" stroke-dasharray="4,4"/>
+    <!-- Seat 3 (80 deg) -->
+    <circle cx="700" cy="347" r="48" stroke-dasharray="4,4"/>
+    <!-- Seat 4 (120 deg) -->
+    <circle cx="664" cy="552" r="48" stroke-dasharray="4,4"/>
+    <!-- Seat 5 (160 deg) -->
+    <circle cx="504" cy="686" r="48" stroke-dasharray="4,4"/>
+    <!-- Seat 6 (200 deg) -->
+    <circle cx="296" cy="686" r="48" stroke-dasharray="4,4"/>
+    <!-- Seat 7 (240 deg) -->
+    <circle cx="136" cy="552" r="48" stroke-dasharray="4,4"/>
+    <!-- Seat 8 (280 deg) -->
+    <circle cx="100" cy="347" r="48" stroke-dasharray="4,4"/>
+    <!-- Seat 9 (320 deg) -->
+    <circle cx="204" cy="166" r="48" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Ambient Candle Flame Halos along rim -->
+  <radialGradient id="candleRimGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FFE082" stop-opacity="0.3"/>
+    <stop offset="60%" stop-color="#FFB300" stop-opacity="0.08"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+  <circle cx="500" cy="120" r="45" fill="url(#candleRimGlow)"/>
+  <circle cx="670" cy="250" r="45" fill="url(#candleRimGlow)"/>
+  <circle cx="700" cy="460" r="45" fill="url(#candleRimGlow)"/>
+  <circle cx="590" cy="640" r="45" fill="url(#candleRimGlow)"/>
+  <circle cx="390" cy="710" r="45" fill="url(#candleRimGlow)"/>
+  <circle cx="200" cy="630" r="45" fill="url(#candleRimGlow)"/>
+  <circle cx="105" cy="440" r="45" fill="url(#candleRimGlow)"/>
+  <circle cx="140" cy="230" r="45" fill="url(#candleRimGlow)"/>
+  <circle cx="300" cy="110" r="45" fill="url(#candleRimGlow)"/>
+</svg>

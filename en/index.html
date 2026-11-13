@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DISCO XIV (D'Information System Community Outbound XIV) - HIMSI UMN. Annual royal banquet outbound & gathering event of Information Systems students at Universitas Multimedia Nusantara.">
+  <title>DISCO XIV - One Table, Endless Stories | HIMSI UMN</title>
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core CSS Files -->
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/logo-disco-xiv.svg">
+</head>
+<body>
+  <!-- Accessible Skip to Content -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Mobile Nav Checkbox Hack -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+
+  <!-- Floating Pill Navbar -->
+  <header class="site-header">
+    <nav class="navbar-pill" aria-label="Main Navigation">
+      <!-- Left: Logo & Title -->
+      <a href="index.html" class="navbar-brand" aria-label="DISCO XIV Home">
+        <img src="../assets/logo-disco-xiv.svg" alt="DISCO XIV Crest Logo" class="navbar-logo-img" width="42" height="42">
+        <span class="navbar-title-text">DISCO XIV</span>
+      </a>
+
+      <!-- Center: Navigation Pill Links -->
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-pill-link active" aria-current="page">Home</a></li>
+        <li><a href="divisi.html" class="nav-pill-link">Divisions</a></li>
+        <li><a href="masuk.html" class="nav-pill-link">Login</a></li>
+        <li><a href="daftar.html" class="nav-pill-link">Register</a></li>
+      </ul>
+
+      <!-- Right: Language Selector Pill -->
+      <div class="navbar-lang-pill" aria-label="Select Language">
+        <a href="../index.html" class="lang-switch-btn" aria-label="Switch to Indonesian">ID</a>
+        <a href="index.html" class="lang-switch-btn active" aria-label="English (Active)">EN</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open or close navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- ====================================================================
+         1. HERO SECTION (100vh) - Royal Banquet Evening
+         ==================================================================== -->
+    <section class="hero-section" aria-label="DISCO XIV Introduction">
+      <div class="container hero-grid">
+        <!-- Hero Left Column -->
+        <div class="hero-content">
+          <div class="hero-crest-badge">
+            <span>👑</span>
+            <span>HIMSI UMN PROUDLY PRESENTS</span>
+          </div>
+
+          <h1 class="hero-title">DISCO XIV</h1>
+
+          <p class="hero-tagline">"One Table, Endless Stories"</p>
+
+          <p class="hero-theme-note">
+            Annual Royal Banquet &amp; Mountain Villa Gathering of Information Systems UMN.
+          </p>
+
+          <!-- Static Date Pill (TODO: Adjust final confirmed event date) -->
+          <div class="hero-date-pill">
+            <span class="hero-date-icon" aria-hidden="true">📅</span>
+            <span>Friday–Sunday, 6–8 November 2027</span>
+            <!-- TODO: Placeholder Date -->
+          </div>
+
+          <div class="hero-actions">
+            <a href="daftar.html" class="btn-royal btn-royal-lg">
+              <span>Register Now</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="masuk.html" class="btn-royal-outline btn-royal-lg">
+              <span>Noble Login</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Mascot Sir Disco Floating on Pedestal -->
+        <div class="hero-mascot-wrap">
+          <!-- Ambient Candle Glow sphere behind Sir Disco -->
+          <div class="candle-glow-sphere" aria-hidden="true"></div>
+
+          <!-- Sir Disco Mascot SVG -->
+          <img src="../assets/mascot-sir-disco.svg" alt="Sir Disco, official DISCO XIV mascot with crown, velvet cape, and menu card" class="hero-mascot-img" width="360" height="375">
+
+          <!-- Ornate Pedestal -->
+          <div class="mascot-pedestal" aria-hidden="true"></div>
+
+          <!-- Mascot Caption -->
+          <div class="mascot-caption-pill">
+            <span>Sir Disco • Master of the Banquet</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scalloped Curtain Transition -->
+      <div class="hero-scallop-edge" aria-hidden="true"></div>
+    </section>
+
+    <!-- ====================================================================
+         2. WHAT IS DISCO? - History & Heritage of HIMSI UMN Outbound
+         ==================================================================== -->
+    <section class="section-about-disco scroll-reveal" aria-labelledby="about-disco-title-en">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="eyebrow">Discover Our Heritage</span>
+          <h2 id="about-disco-title-en">What is DISCO?</h2>
+          <div class="gold-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-disco-grid">
+          <!-- Left: DISCO XIV Crest Emblem Card -->
+          <div class="about-disco-logo-card">
+            <div class="royal-crest-showcase">
+              <img src="../assets/logo-disco-xiv.svg" alt="DISCO XIV Imperial Crest" class="about-disco-crest-img" width="170" height="150">
+              <div class="about-disco-badge-tag">HIMSI UMN • EST. 2011</div>
+            </div>
+          </div>
+
+          <!-- Right: Narrative Heritage Card -->
+          <article class="parchment-card about-disco-narrative-card">
+            <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+            <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+            <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-bl" aria-hidden="true">
+            <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-br" aria-hidden="true">
+
+            <h3 class="about-disco-card-heading">A Cherished Tradition Spanning Over 14 Years</h3>
+            <p class="about-disco-card-text">
+              <strong>D'Information System Community Outbound (DISCO)</strong> is the signature annual celebration of <strong>HIMSI UMN</strong>—a joy-filled tradition strengthening solidarity and heartfelt kinship across the entire Information Systems family, embracing lecturers, alumni, and active students alike!
+            </p>
+            <p class="about-disco-card-text">
+              Founded in 2011 under the name <em>D'Information System Community</em>, DISCO has been lovingly passed down through generations, proudly standing as one of the longest-running and most cherished traditions in HIMSI UMN history.
+            </p>
+            <p class="about-disco-card-text" style="margin-bottom: 0;">
+              This year, <strong>DISCO XIV</strong> gathers us once again at the royal banquet table themed <em>"One Table, Endless Stories"</em> at the highland mountain villa—weaving laughter, outbound camaraderie, and timeless kinship!
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. INVITATION SECTION - Royal Invitation & Theme Narrative
+         ==================================================================== -->
+    <section class="section-undangan scroll-reveal" aria-labelledby="invitation-title">
+      <div class="container invitation-wrapper">
+        <article class="parchment-card invitation-content">
+          <!-- Ornate Corner Flourishes -->
+          <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tl" aria-hidden="true">
+          <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-tr" aria-hidden="true">
+          <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-bl" aria-hidden="true">
+          <img src="../assets/ornaments/corner-flourish.svg" alt="" class="corner-flourish corner-flourish-br" aria-hidden="true">
+
+          <!-- Wax Seal Ribbon Ornament -->
+          <img src="../assets/ornaments/wax-seal.svg" alt="DISCO XIV Wax Seal" class="invitation-wax-seal" width="90" height="90">
+
+          <p class="invitation-salutation">To All Guests of Honor</p>
+          <h2 id="invitation-title" class="invitation-heading">Royal Banquet Invitation</h2>
+          <p class="invitation-theme">A Royal Banquet Gathering at the Mountain Villa</p>
+
+          <div class="gold-divider" aria-hidden="true"></div>
+
+          <!-- Narrative placeholder (TODO) -->
+          <p class="invitation-prose">
+            The extended family of Information Systems, Universitas Multimedia Nusantara, cordially invites all students to partake as honored guests in the grand assembly of <strong>DISCO XIV</strong>. Continuing the beloved tradition of our annual mountain villa getaway, this year's gathering unfolds in the grandeur of an imperial feast: <em>"One Table, Endless Stories"</em>.
+          </p>
+          <p class="invitation-prose">
+            Here, every participant is a revered noble, every division serves as a devoted court curator, and every shared triumph weaves enduring kinship beyond generations.
+          </p>
+
+          <!-- 3 Goals Styled as Menu Items -->
+          <div class="banquet-goals-grid">
+            <div class="goal-menu-item">
+              <div class="goal-course-number">Course I</div>
+              <h3 class="goal-title">Strengthen Solidarity</h3>
+              <p class="goal-description">
+                <!-- TODO: Goal 1 description -->
+                Uniting all student batches of Information Systems UMN in a warm, steadfast brotherhood under the starlit mountain sky.
+              </p>
+            </div>
+
+            <div class="goal-menu-item">
+              <div class="goal-course-number">Course II</div>
+              <h3 class="goal-title">Develop Potential</h3>
+              <p class="goal-description">
+                <!-- TODO: Goal 2 description -->
+                Cultivating leadership, collaborative problem-solving, and personal resilience through spirited outbound team adventures.
+              </p>
+            </div>
+
+            <div class="goal-menu-item">
+              <div class="goal-course-number">Course III</div>
+              <h3 class="goal-title">Network &amp; Collaborate</h3>
+              <p class="goal-description">
+                <!-- TODO: Goal 3 description -->
+                Fostering genuine cross-generational bridges, shaping future aspirations alongside the HIMSI UMN family.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. EVENT TIMELINE - Multi-Course Menu Timeline
+         ==================================================================== -->
+    <section class="section-timeline scroll-reveal" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="eyebrow">The Royal Itinerary</span>
+          <h2 id="timeline-title">DISCO XIV Banquet Courses</h2>
+          <div class="gold-divider" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            Four exquisite courses served in celebration of our shared expedition.
+          </p>
+        </div>
+
+        <div class="timeline-menu-wrap">
+          <!-- Course 1: ECHO (CSR) -->
+          <div class="timeline-course-item">
+            <div class="timeline-node" aria-hidden="true">I</div>
+            <div class="course-info-col">
+              <div class="course-card">
+                <span class="course-badge">Course I • Opening Feast</span>
+                <h3 class="course-title">ECHO XIV (CSR Outreach)</h3>
+                <div class="course-meta">
+                  <span>📍 Community Orphanage Center — TBA</span>
+                  <!-- TODO: Venue ECHO -->
+                </div>
+                <p class="course-desc">
+                  <!-- TODO: Description ECHO -->
+                  A heartwarming social service and charity outreach reflecting the benevolence and empathy of the HIMSI UMN community.
+                </p>
+              </div>
+            </div>
+            <div class="course-date-col">
+              <div class="hero-date-pill">
+                <span>📅 Saturday, 18 September 2027</span>
+                <!-- TODO: Date ECHO -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2: DISTALK XIV (Pre-Event) -->
+          <div class="timeline-course-item">
+            <div class="timeline-node" aria-hidden="true">II</div>
+            <div class="course-info-col">
+              <div class="course-card">
+                <span class="course-badge">Course II • Feast of Wisdom</span>
+                <h3 class="course-title">DISTALK XIV (Pre-Event Seminar)</h3>
+                <div class="course-meta">
+                  <span>📍 Lecture Hall UMN</span>
+                  <!-- TODO: Venue DISTALK -->
+                </div>
+                <p class="course-desc">
+                  <!-- TODO: Description DISTALK -->
+                  An inspiring academic and leadership seminar featuring distinguished alumni and industry trailblazers prior to the villa outbound.
+                </p>
+              </div>
+            </div>
+            <div class="course-date-col">
+              <div class="hero-date-pill">
+                <span>📅 Saturday, 9 October 2027</span>
+                <!-- TODO: Date DISTALK -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3: DISCO XIV Main Event -->
+          <div class="timeline-course-item">
+            <div class="timeline-node" aria-hidden="true">III</div>
+            <div class="course-info-col">
+              <div class="course-card">
+                <span class="course-badge">Course III • The Main Banquet</span>
+                <h3 class="course-title">DISCO XIV (Main Villa Outbound)</h3>
+                <div class="course-meta">
+                  <span>📍 Puncak Mountain Villa — TBA</span>
+                  <!-- TODO: Venue Main Event -->
+                </div>
+                <p class="course-desc">
+                  <!-- TODO: Description Main Event -->
+                  The 3-day, 2-night pinnacle at the mountain villa: royal dinner banquet, team challenges, and cozy evening bonfire stories.
+                </p>
+              </div>
+            </div>
+            <div class="course-date-col">
+              <div class="hero-date-pill">
+                <span>📅 Friday–Sunday, 6–8 November 2027</span>
+                <!-- TODO: Date Main Event -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4: Closing & Appreciation -->
+          <div class="timeline-course-item">
+            <div class="timeline-node" aria-hidden="true">IV</div>
+            <div class="course-info-col">
+              <div class="course-card">
+                <span class="course-badge">Course IV • Grand Finale</span>
+                <h3 class="course-title">Closing &amp; Appreciation Evening</h3>
+                <div class="course-meta">
+                  <span>📍 Function Hall UMN</span>
+                  <!-- TODO: Venue Closing -->
+                </div>
+                <p class="course-desc">
+                  <!-- TODO: Description Closing -->
+                  An evening of honor, awarding exemplary committees and favorite participants alongside a commemorative journey aftermovie.
+                </p>
+              </div>
+            </div>
+            <div class="course-date-col">
+              <div class="hero-date-pill">
+                <span>📅 Sunday, 21 November 2027</span>
+                <!-- TODO: Date Closing -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. STATS STRIP - Static Gold Numerals in Ornate Frames
+         ==================================================================== -->
+    <section class="section-stats scroll-reveal" aria-label="DISCO XIV Statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <!-- Stat 1: Participants -->
+          <div class="stat-frame">
+            <div class="stat-number">450+</div>
+            <!-- TODO: Static participants count -->
+            <div class="stat-label">Honored Guests</div>
+          </div>
+
+          <!-- Stat 2: Committee -->
+          <div class="stat-frame">
+            <div class="stat-number">65+</div>
+            <!-- TODO: Static committee count -->
+            <div class="stat-label">Banquet Curators</div>
+          </div>
+
+          <!-- Stat 3: Editions -->
+          <div class="stat-frame">
+            <div class="stat-number">14</div>
+            <div class="stat-label">Editions of Heritage</div>
+          </div>
+
+          <!-- Stat 4: Impressions -->
+          <div class="stat-frame">
+            <div class="stat-number">120K+</div>
+            <!-- TODO: Static impressions count -->
+            <div class="stat-label">Social Highlights</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. EVENT DATE BLOCK - Styled Vintage Pocket-Watch / Clock Plaque
+         ==================================================================== -->
+    <section class="section-date-block scroll-reveal" aria-labelledby="countdown-title">
+      <div class="container">
+        <article class="pocket-watch-card">
+          <span class="eyebrow">Awaiting The Grand Evening</span>
+          <h2 id="countdown-title">Countdown to the Royal Outbound</h2>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+
+          <p class="section-subtitle">
+            The gates of the highland villa shall soon open to receive our distinguished nobles.
+          </p>
+
+          <!-- JAVASCRIPT EXTENSION POINT: 
+               The countdown below uses STATIC numbers in compliance with tech constraints (no JS).
+               To connect dynamic countdown functionality in the future:
+               1. Select elements .countdown-digit.
+               2. Calculate remaining time to target date (e.g. 2027-11-06T15:00:00+07:00).
+               3. Update innerText dynamically every second via setInterval.
+          -->
+          <div class="countdown-grid" role="timer" aria-label="Static countdown timer to event date">
+            <div class="countdown-slot">
+              <div class="countdown-digit">08</div>
+              <div class="countdown-unit">Days</div>
+            </div>
+            <div class="countdown-slot">
+              <div class="countdown-digit">14</div>
+              <div class="countdown-unit">Hours</div>
+            </div>
+            <div class="countdown-slot">
+              <div class="countdown-digit">30</div>
+              <div class="countdown-unit">Minutes</div>
+            </div>
+            <div class="countdown-slot">
+              <div class="countdown-digit">00</div>
+              <div class="countdown-unit">Seconds</div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.9rem; color: var(--color-parchment-border); margin-top: 1rem;">
+            📍 Venue: <strong>Puncak Mountain Villa (TBA)</strong> • Registration remains open while royal capacity permits.
+          </p>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="daftar.html" class="btn-royal">
+              <span>Accept Invitation (RSVP)</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. PARTNER & SPONSOR CAROUSEL - Engraved Plaques Marquee
+         ==================================================================== -->
+    <section class="section-partners scroll-reveal" aria-labelledby="partners-title">
+      <div class="container">
+        <div class="section-title-wrap" style="margin-bottom: var(--space-xl);">
+          <span class="eyebrow">Patronage &amp; Support</span>
+          <h2 id="partners-title">Partners of the Banquet</h2>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Marquee Container -->
+      <div class="marquee-container" aria-label="List of partners and event sponsors">
+        <div class="marquee-track">
+          <!-- Plaque 1 -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">HIMSI UMN</div>
+            <div class="partner-plaque-sub">Host Organization</div>
+          </div>
+          <!-- Plaque 2 -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">Universitas Multimedia Nusantara</div>
+            <div class="partner-plaque-sub">Academic Alma Mater</div>
+          </div>
+          <!-- Plaque 3 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">Grand Banquet Partner</div>
+            <div class="partner-plaque-sub">Official Sponsor (TODO)</div>
+          </div>
+          <!-- Plaque 4 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">Royal Beverage Co.</div>
+            <div class="partner-plaque-sub">Banquet Beverage (TODO)</div>
+          </div>
+          <!-- Plaque 5 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">UMN Radio</div>
+            <div class="partner-plaque-sub">Media Partner</div>
+          </div>
+          <!-- Plaque 6 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">UMN TV</div>
+            <div class="partner-plaque-sub">Media Partner</div>
+          </div>
+          <!-- Plaque 7 (TODO) -->
+          <div class="partner-plaque">
+            <div class="partner-plaque-title">Tech Villa Sponsor</div>
+            <div class="partner-plaque-sub">Supporting Sponsor (TODO)</div>
+          </div>
+
+          <!-- Duplicate Track for Seamless Marquee Loop -->
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">HIMSI UMN</div>
+            <div class="partner-plaque-sub">Host Organization</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">Universitas Multimedia Nusantara</div>
+            <div class="partner-plaque-sub">Academic Alma Mater</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">Grand Banquet Partner</div>
+            <div class="partner-plaque-sub">Official Sponsor (TODO)</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">Royal Beverage Co.</div>
+            <div class="partner-plaque-sub">Banquet Beverage (TODO)</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">UMN Radio</div>
+            <div class="partner-plaque-sub">Media Partner</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">UMN TV</div>
+            <div class="partner-plaque-sub">Media Partner</div>
+          </div>
+          <div class="partner-plaque" aria-hidden="true">
+            <div class="partner-plaque-title">Tech Villa Sponsor</div>
+            <div class="partner-plaque-sub">Supporting Sponsor (TODO)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Left: Address & Mascot Badge -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">🏰</span>
+            <span>Secretariat Office</span>
+          </h3>
+          <address class="footer-address">
+            <strong>HIMSI UMN</strong><br>
+            Universitas Multimedia Nusantara<br>
+            Jl. Scientia Boulevard, Gading Serpong<br>
+            Tangerang, Banten 15811
+          </address>
+          <a href="index.html" aria-label="Return to top with Sir Disco">
+            <img src="../assets/mascot-badge.svg" alt="Sir Disco Official Mascot Badge" class="footer-mascot-badge" width="68" height="68">
+          </a>
+        </div>
+
+        <!-- Center: Crest Logo, Tagline, Copyright -->
+        <div class="footer-center">
+          <img src="../assets/logo-disco-xiv.svg" alt="DISCO XIV Crest Logo" class="footer-logo" width="90" height="78">
+          <p class="footer-tagline">"One Table, Endless Stories"</p>
+          <div class="footer-hashtag">#SatuMejaBerjutaCerita</div>
+          <div class="gold-divider gold-divider-sm" aria-hidden="true"></div>
+        </div>
+
+        <!-- Right: Social Media -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <span aria-hidden="true">📜</span>
+            <span>Social Chronicles</span>
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--color-parchment-border); margin-bottom: 0.75rem;">
+            Follow our imperial dispatches and live chronicles on social channels:
+          </p>
+          <a href="https://instagram.com/discoumn_si" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Visit Official Instagram @discoumn_si">
+            <span aria-hidden="true">📷</span>
+            <span>@discoumn_si</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="footer-copyright">
+        <p>&copy; 2027 D'Information System Community Outbound. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
